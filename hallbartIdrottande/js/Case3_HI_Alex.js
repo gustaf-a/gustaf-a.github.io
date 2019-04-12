@@ -1,7 +1,7 @@
-var Case3 = (function (self) {
+var Case3_HI_Alex = (function (self) {
 
     self.ID = {
-        "text": "Case3", "saveForUnlocked": "true", "unlockedID": "main", "backgroundParallax": "0",
+        "text": "Case3_HI_Alex", "saveForUnlocked": "true", "unlockedID": "main", "backgroundParallax": "0",
         "bottombar":
             "<div class='rightcorner'><div class='progresstext'></div></div><div class='progressbar'><div class='progresschapterthumbs'></div><div class='progresspercent'></div></div>"
         /*<div class='toggleanimation' onclick='FS.toggleanimation();'>[Stäng av animationer]</div>
