@@ -1,0 +1,297 @@
+ <!doctype html>
+<!--[if lt IE 7 ]> <html class="ie6 no-js" lang="sv-se"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie7 no-js" lang="sv-se"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie8 no-js" lang="sv-se"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie9 no-js" lang="sv-se"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="sv-se"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Reslust</title>
+  <meta name="description" content="Reslust handlar om sex, relationer och känslor. Du får välja vilka resor du vill följa med på och hur du tycker att personerna ska göra i olika situationer: Hur känner de och vad kan göra deras äventyr skönare och säkrare?" />
+  <meta name="keywords" content="SRHR, sex, hälsa, ungdomar, relationer, känslor, resor" />
+  <meta name="author" content="SRHR.SE/Reslust">
+
+ <link rel="shortcut icon" href="img/favicon.gif?v=2" />
+
+  <!-- Facebook Metadata /--> <!--To be decided by the customer-->
+ 
+  <meta property="og:image" content="http://srhr.se/reslust/img/share.jpg" />
+  <meta property="og:description" content="Reslust handlar om sex, relationer och känslor. Du får välja vilka resor du vill följa med på och hur du tycker att personerna ska göra i olika situationer: Hur känner de och vad kan göra deras äventyr skönare och säkrare?"/>
+  <meta property="og:type"  content="website" /> 
+   <meta property="og:url"  content="http://srhr.se/reslust/" />
+  <meta property="og:title" content="Reslust"/>
+
+  <!-- Google+ Metadata /-->
+  <meta itemprop="name" content="Reslust">
+  <meta itemprop="description" content="Reslust handlar om sex, relationer och känslor. Du får välja vilka resor du vill följa med på och hur du tycker att personerna ska göra i olika situationer: Hur känner de och vad kan göra deras äventyr skönare och säkrare?">
+  <meta itemprop="image" content="http://srhr.se/reslust/img/share.jpg">
+
+  <!-- Twitter+ Metadata /-->
+  <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@SRHRse">
+<meta name="twitter:title" content="Reslust">
+<meta name="twitter:description" content="Reslust handlar om sex, relationer och känslor. Du får välja vilka resor du vill följa med på och hur du tycker att personerna ska göra i olika situationer: Hur känner de och vad kan göra deras äventyr skönare och säkrare?">
+<meta name="twitter:image" content="http://srhr.se/reslust/img/share.jpg">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Ropa+Sans:400,400italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lobster+Two:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+  <!--<link href='https://fonts.googleapis.com/css?family=Anonymous+Pro:700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="fonts/stylesheet.css" type="text/css" charset="utf-8" />-->
+
+  <link rel="stylesheet" href="css/mediaelementplayer.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <link rel="manifest" href="manifest.json">
+  <!--<link rel="Shortcut Icon" href="img/HH_favicon.ico" type="image/x-icon">-->
+ 
+
+
+  <!-- Grab Google CDN's jQuery, fall back to local if offline -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.9.1.min.js"><\/script>')</script>
+
+ 
+  
+
+  
+<!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-69063478-1');  //61219643-1 is webquiz dummy, change for sharp version
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+ 
+</head>
+<body>
+ 
+
+   <div class="backbg"></div>
+   <div class="next-control" id="nextButton">
+             
+    </div>
+    <div class="prev-control" id="prevButton">
+
+          
+    </div>
+    <div id="modalresetbg" class="modal_overlay" style="width:100%; display:none; margin:0 auto;"></div>
+    <div id="modalresettext"><div class="modal_text"><div class="modalheader"><h1>Är du säker på att du vill börja om utbildningen?</h1><img class="closemodal" src="img/closemodal.png"/></div><div class="modalcontent">Alla framsteg du gjort kommer försvinna, och du börjar om från början.</div>
+    <div id="modalresetconfirm" onclick="FS.resetProgress();">Ja, jag vill börja om</div>
+    <div id="modalresetcancel">Nej, jag vill fortsätta där jag är nu</div>
+    </div></div>
+   
+
+
+
+
+
+
+    <div id="page-menu-container" class="animated">
+
+            <nav class="page-menu">
+              <ul>
+                <li><a href="index.html" title="UTBILDNINGEN">FORTSÄTT</a></li>
+                <!--<li></li>-->
+                 <li><a onclick="FS.gotoID('huvudmeny');" title="Huvudmeny">TILL HUVUDMENYN</a></li>
+                 <li><a onclick="FS.toggleanimation();" title="Animationer" class="toggleanimation">Stäng av animationer</a></li>
+                 <!--  <li><a onclick="FS.gotoID('20');" title="Backpacking">BACKPACKING</a></li>
+                   <li><a onclick="FS.gotoID('30');" title="Backpacking">FESTRESAN</a></li>
+                 <li></li>-->
+                <li><a  onclick="FS.confirmResetProgress();">BÖRJA OM</a></li>
+                    
+              </ul>
+            </nav>
+
+            <div class="nav-bar" id="navigationbar">
+              <div class="top-left-content">
+                <a id="toggleMenu">
+                  <i class="fa fa-bars"><span>MENY</span></i>
+                </a>
+
+              </div>
+
+          
+            </div>
+
+          
+
+          </div>
+
+
+
+
+
+	  <div id="outer">
+
+
+
+
+      <div id="middle">
+
+
+		    <div id="inner" >
+
+          
+          <div class="row centered_box scrollable" id="main_div">
+             <!-- IT IS HERE ALL THE CONTENT WILL BE GENERATED-->
+          </div>
+       
+			  </div>
+        <!--<div id='mobileNextButton'>GÅ VIDARE ></div>-->
+        <div id="case-nav-wrapper">
+          <div id="case-nav"></div>
+          <span id="debugtitle">DEBUG INFO:</span>
+          <div id="nodeNrDebug">node 1.1.1</div>
+          <div id="debugPrevButton"><</div>
+          <div id="debugNextButton">></div>
+        </div>
+      </div>
+		</div>
+    <div class="backstretch"></div>
+
+
+
+
+   <!--SOUND BAR -->
+   <div id="audiobar">
+   
+    </div>
+
+    <div id="bottom-nav" class="bottombar">
+     <!-- <div class="rootnav" onclick="FS.gotoID('huvudmeny');">GÅ TILL HUVUDMENY</div>-->
+       
+    </div>
+    
+
+     <div id="bottombar-main" class="bottombar">
+     <!-- <div class="about" onclick="FS.gotoID('about');">OM UTBILDNINGEN</div>
+      <div class="reset" onclick="FS.confirmResetProgress();">NOLLSTÄLL UTBILDNINGEN</div>
+  <div class="toggleanimation" onclick="FS.toggleanimation();">[Stäng av animationer]</div>
+      <div class="miljologo"></div>
+    --> </div>
+	<div id="js-preload"></div>
+
+  <!--<div class="backstretch"></div>-->
+  <script>
+  <!--
+    function isTouchDevice(){
+      return "ontouchstart" in window || window.DocumentTouch && document instanceof DocumentTouch;
+    }
+
+
+
+    $(function(){ //if Jquery is loaded
+    $("#prevButton").hide();
+    $("#nextButton").hide();
+
+   
+
+
+
+    $('#main_div').append('<div id="loading-spinner">LADDAR</div>');
+   
+  
+
+    $.get("js/libs/underscore-min.js", {}, function()
+    {
+ 
+
+                          $.get("js/libs/fastclick.js")
+                        
+                          .pipe($.get("js/libs/plugins.js"))
+                          .pipe($.get("js/libs/jquery.imagesloaded.min.js"))
+                          .pipe($.get("js/libs/jquery.total-storage.min.js"))
+                          .pipe($.get("js/libs/backstretch.js"))
+                  
+                          .pipe($.get("js/libs/froogaloop.min.js"))
+                          .pipe($.get("js/libs/modernizr-2.6.2.min.js"))
+                         // .pipe($.get("js/libs/device.min.js"))
+                        
+                     
+                       
+                             .pipe($.get("js/libs/mediaelement-and-player.js"))
+                          .pipe($.get("js/libs/gs/TweenMax.min.js"))
+                            .pipe($.get("js/libs/gs/plugins/CSSPlugin.min.js"))
+                          .pipe($.get("js/libs/gs/easing/EasePack.min.js"))
+                        //   .pipe($.get("js/libs/gs/plugins/ThrowPropsPlugin.min.js"))
+                         // .pipe($.get("js/libs/gs/utils/Draggable.min.js"))
+                         
+                          //.pipe($.get("js/libs/jquery-ui.min.js"))
+                          .pipe($.get("js/libs/interact-1.2.3.min.js"))
+                        
+                          .pipe($.get("js/libs/jquery.imagemapster.min.js"))
+                          .pipe($.get("js/libs/jquery.fileDownload.js"))
+                         
+                          
+                          .pipe($.get("js/Case1a.js"))
+                          .pipe($.get("js/Case2.js"))
+                          .pipe($.get("js/Case3.js"))
+                          .pipe($.get("js/amir.js"))
+                          .pipe($.get("js/victor.js"))
+                          .pipe($.get("js/peter.js"))
+                          .pipe($.get("js/Case4.js"))
+
+                             .pipe($.get("js/clickandpopup.js"))
+                             //.pipe($.get("js/energitjuvar.js"))
+                            // .pipe($.get("js/sorteringsspel.js"))
+                            // .pipe($.get("js/selectAlternativeGame.js"))
+                          .pipe($.get("js/main.js", {}, function()
+                          {
+                           
+
+                             startApplication();
+                              
+                          }));
+                      
+    })
+
+
+
+
+ 
+     function startApplication() {
+         $('#loading-spinner').fadeOut('slow');
+        //$('#loading-spinner').html("LADDAR<br/>100%");
+         setTimeout(FS.startMain,500);
+          FastClick.attach(document.body);
+           
+     }
+
+});
+
+
+  </script>
+  
+   
+
+
+
+
+  <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started -->
+  <!--[if lt IE 7 ]>
+    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+  <![endif]-->
+
+  </body>
+</html>

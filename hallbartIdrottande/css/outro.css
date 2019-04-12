@@ -1,0 +1,726 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+
+    background: #FFF;
+}
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+
+body {
+    font: 16px/26px "Roboto Condensed", Helvetica, Helvetica Neue, Arial;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* ===================
+    ALL:  Theme
+   =================== */
+
+.header-container {
+    padding-bottom: 20px;
+}
+
+.footer-container,
+.main aside {
+
+}
+
+.header-container,
+.footer-container {
+    
+}
+
+.title, h1, h2, h3, h4, h5  {
+
+    font-family: "bebas_neuebold";
+     letter-spacing: 0.5px;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+    font-size: 27px;
+    display: block;
+    line-height: 1.2;
+font-weight: normal;
+padding: 0;
+margin: 15px 0 10px 0;
+    color: #333;
+}
+ .accordion-toggle {
+ cursor: pointer;
+    font-size: 18px;
+    margin: 0 0 10px 0;
+}
+  .accordion-content {display: none;
+  padding-bottom: 50px;
+}
+  .accordion-content.default {display: block;}
+
+
+.leftheader {
+    width: 100%;
+    text-align: center;
+    
+
+}
+.title {
+    font-size: 48px;
+    width: 100%;
+    margin-bottom: 0;
+        font-family: "Lobster Two";
+            font-weight: bold;
+    font-style: italic;
+    color: #f46167;
+
+}
+.slogantitle {
+    width: 100%;
+    font-family: "Roboto Condensed";
+    font-weight: 300;
+     color:#343434;
+
+
+}
+.gbgstad {
+   text-align: center;
+display: block;
+
+width: 100%;
+margin-top: 28px;
+}
+.gbgstad img {
+width: 30%;
+margin-top: -20px;
+}
+
+.diplomwrapper {
+    background-color: #d4ebf9;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  
+    box-sizing:border-box;
+    text-align: center;
+    display: block;
+    position: relative;
+}
+
+.diplomthumb {
+    
+    display: inline-block;
+}
+.diplomform {
+    font-size: 14px;
+color: #000;
+padding: 0px 20px 0px 20px;
+
+display: block;
+width: auto;
+
+}
+p.diplomtext2 {
+    margin-bottom: 0px;
+}
+#myform {
+    width: 100%;
+}
+.formname {
+    width: 100%;
+    border: 3px solid #b3b3b3;
+    height: 30px;
+    font-size: 18px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+.formsubmit {   
+    background: #A2C037;
+    color: #FFF;
+    border:none;
+    font-size: 18px;
+    float: none;
+margin-bottom: 20px;
+    padding:10px 20px;
+     margin-top: 10px;
+}
+
+.miljometodwrapper {
+    position: relative;
+    background-color: #a2c037;
+  
+    margin: 0;
+  padding: 0 20px 20px 20px;
+width: 100%;
+       float:left;
+       box-sizing:border-box;
+       font-size: 14px;
+}
+.miljometodheader {
+    color: #FFF;
+}
+.miljometodwrapper p {
+    line-height: 1.2;
+}
+.miljometodwrapper a {
+    color: #FFF;
+
+}
+.miljometodwrapper img {
+    margin-top: 30px;
+}
+
+.aside {
+    background-color: #CCC;
+display: block;
+border-radius: 20px;
+color: #000;
+float: left;
+margin-top: 50px;
+}
+.aside h3 {
+    color:#000;
+}
+.aside a {
+    color: #000;
+    font-weight: bold;
+}
+
+header {
+     font-size: 14px;
+     line-height: 1.5;
+
+}
+section {
+padding-top: 20px;
+ font-size: 14px;
+ line-height: 1.5;
+
+
+}
+.post-container, .aside_headerwrapper {
+    font-size: 14px;
+
+}
+.post-thumb, .aside_icon {
+    float: left
+}
+.post-thumb img, .aside_icon img{
+    display: block
+}
+.aside_icon img {
+    margin: 20px 0 0 0;
+    display: none;
+}
+
+.post-content{
+    padding-left: 20px;
+
+    overflow: auto;
+}
+.aside_header {
+ 
+}
+section a {
+    color: #000;
+    font-weight: 700;
+    padding-top: 10px;
+    display: inline-block;
+}
+section p {
+    
+}
+.selected {
+    color: #F46167;
+    font-size: 24px;
+    padding-top: 20px;
+    transition: padding 1s;
+    border-top: 2px solid;
+
+}
+
+.sectionheader {
+    font-family: "Lobster Two";
+    color: #F46167;
+    font-size: 24px;
+    margin: 50px 0 20px 0;
+    font-style: italic;
+}
+div#helptext {
+    font-style: italic;
+}
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+
+    color: white;
+    background: #e44d26;
+}
+
+nav a:hover,
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+ .title {
+      
+        font-size: 27px;
+    }
+.main {
+    padding: 30px 0;
+}
+
+.main article h1 {
+
+    font-size: 2em;
+}
+
+.main aside {
+    width: 88%;
+    padding: 0px 28px 10px;
+}
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+     .title {
+       
+        font-size: 27px;
+    }
+    .diplomform {
+        width: 55%;
+        padding: 0px 0 0px 20px;
+    }
+    .diplomwrapper {
+        text-align: left;
+        padding: 0 20px 20px 20px;
+        margin:0;
+    }
+
+    .diplomthumb {
+        float:left;
+    }
+    .formsubmit {
+
+    float: right;
+    }
+    .leftheader {
+width: 65%;
+float: left;
+text-align: left;
+}
+.gbgstad {
+    text-align: right;
+
+width: 35%;
+}
+.gbgstad img {
+width: 205px;
+margin-top: 0;
+}
+
+
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float: left;
+        width: 27%;
+        margin: 0 1.7%;
+        padding: 25px 2%;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+.main aside {
+    width: 93%;
+}
+   
+     .diplomwrapper, .miljometodwrapper {
+     
+        height: 345px;
+        width:55%;
+    }
+    .miljometodwrapper {
+        width: 45%;
+    }
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+        font-size: 40px;
+    }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+
+/* ============
+    WIDE: Main
+   ============ */
+
+  
+}
+
+@media only screen and (min-width: 1140px) {
+   header-container,
+    .main aside {
+        /*-webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+
+    */
+
+    margin-top: 0px;
+
+    }
+      .main article {
+       
+    }
+
+    .main aside {
+        float: right;
+        width: 25%;
+    }
+
+/* ===============
+    Maximal Width
+   =============== */
+   .title {
+    font-size: 55px;
+    }
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+    .aside_icon img {
+        display: block;
+    }
+    .aside_header {
+    padding-left: 20px;
+
+
+    overflow: auto;
+    }
+    .diplomwrapper, .miljometodwrapper {
+        height: 265px;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+.main.wrapper {
+    padding-bottom: 600px;
+}
+.resultarticle {
+    width: 100% !important;
+}
+.answertext {
+   position: absolute;
+    display: block;
+    left: 20px;
+}
+.resultarticle .post-container {
+position: relative;
+}
+.resultarticle section {
+    width: 100% !important;
+    padding-bottom: 50px;
+}
+.answervalue, .answerpercentage {
+
+  display: block;
+  position: absolute;
+  right: 20px;
+}
+.answervalue {
+    right: 80px;
+}
+.answer {
+  background: rgb(234, 234, 234);
+  margin: 10px 0;
+  color: #333;
+  padding: 10px 15px;
+  border-radius: 3px;
+  font-size: 20px;
+  height: 28px;
+
+  position: relative;
+  }
+
+  .totalt {
+       position: relative;
+    text-align: right;
+    font-size: 16px;
+  }
+
+ .progress {
+  position: absolute;
+  background: rgb(236, 180, 182);
+  height: 48px;
+  top: 0;
+  left: 0;
+  border-radius: 5px 0 0 5px;
+   -webkit-transition:width 2s;
+   transition:width 2s;
+
+}
+.answer.feelings {
+    height: 24px;
+    padding: 0;
+    margin: 2px 0 0 0;
+    font-size: 16px;
+}
+
+.feelings .progress {
+    height: 24px;
+}
+
+
+
+.awaitanimation {
+    width: 0% !important;
+}
