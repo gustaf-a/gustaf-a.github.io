@@ -20,38 +20,9 @@ var Case3_HI_Alex = (function (self) {
             { "url": "bild_8.png" },
             { "url": "bild_10.png" },
             { "url": "bild_11.png" },
-            { "url": "gym.png" },
+            { "url": "gym.jpg" },
 
-            { "url": "3_0.jpg" },
-            { "url": "3_1.jpg" },
-            { "url": "3_2.jpg" },
-
-            { "url": "3_2_1.jpg" },
-            { "url": "3_2_2.jpg" },
-            { "url": "3_3.jpg" },
-
-            { "url": "3_3_1.jpg" },
-            { "url": "3_3_2.jpg" },
-            { "url": "3_3_4.jpg" },
-            { "url": "3_3_4_unlocked.jpg" },
-
-            { "url": "3_6_1.jpg" },
-            { "url": "3_6_2.jpg" },
-            { "url": "3_6_3.jpg" },
-            { "url": "3_5_3.jpg" },
-            { "url": "3_4_4.jpg" },
-            { "url": "3_6_4.jpg" },
-            { "url": "3_5_4.jpg" },
-            { "url": "3_4_1.jpg" },
-            { "url": "3_4_2.jpg" },
-            { "url": "3_5_1.jpg" },
-            { "url": "3_5_2.jpg" },
-            { "url": "3_7.jpg" },
-            { "url": "3_8.jpg" },
-            { "url": "3_9.jpg" },
-            { "url": "3_10.jpg" },
-            { "url": "3_11.jpg" }
-
+            { "url": "3_5_4.jpg" }
             ]
     };
     self.nodes = {
@@ -155,7 +126,7 @@ var Case3_HI_Alex = (function (self) {
                     "title": "",
                     "titlecenter": "true",
                     "textclass": "phototext",
-                    "text": "<span class='normaltext'>Tränaren bokar direkt in ett möte med en fysioterapeut som ger honom några rehab-övningar för att hjälpa honom tillbaka.<br class='nospacebr'/>Visste du att bristningar i baksida lår är en av de vanligaste skadorna inom friidrotten? <a href='https://www.friskfriidrott.se/portfolio/de-vanligaste-skadorna-inom-ungdomsfriidrott/' target='_blank'>Mer om vanliga skador</a></span>",
+                    "text": "<span class='normaltext'>Tränaren bokar direkt in ett möte med en fysioterapeut som ger honom några rehab-övningar för att hjälpa honom tillbaka.<br class='nospacebr'/>Visste du att bristningar i baksida lår är en av de vanligaste skadorna inom friidrotten? <br> <a class='normaltextlink' href='https://www.friskfriidrott.se/portfolio/de-vanligaste-skadorna-inom-ungdomsfriidrott/' target='_blank'>Mer om vanliga skador</a></span>",
                     "navigationDirection": "fade",
                     "showNextButton": "0"
                 },
@@ -295,7 +266,7 @@ var Case3_HI_Alex = (function (self) {
                     "title": "",
                     "titlecenter": "true",
                     "textclass": "phototext",
-                    "text": "<span class='normaltext'>Tack för att du följt med Alex och hans träning!</span>",
+                    "text": "<span class='normaltext'>Tack för att du följt med Alex!</span>",
                     "showNextButton": "0",
                     "gotoID": "huvudmeny"
                 },

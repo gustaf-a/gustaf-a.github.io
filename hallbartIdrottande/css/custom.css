@@ -713,6 +713,7 @@ span.normaltext br {
     line-height: 50px;
 
 }
+
 span.normaltext br.nospacebr{
     line-height: 1 !important;
 }
@@ -1745,7 +1746,6 @@ width: 86% !important;
         padding: 0px 50px;
 }
 
-
 /*
 
 @media screen and (max-height:  700px) {
@@ -2045,7 +2045,7 @@ span.normaltext{
 .touch .bottombar {
     
 }
-    
+
     
 /*
 @media only screen and (max-width: 320px) { .desktop { display: none; }
@@ -2080,5 +2080,3 @@ span.normaltext{
   #main_div { overflow-x: hidden; } }
   */
 
-    
-   
