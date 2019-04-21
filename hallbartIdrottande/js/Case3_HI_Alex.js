@@ -21,6 +21,7 @@ var Case3_HI_Alex = (function (self) {
             { "url": "bild_10.png" },
             { "url": "bild_11.png" },
             { "url": "gym.jpg" },
+            { "url": "phone_bestFriend.jpg" },
 
             { "url": "3_5_4.jpg" }
             ]
@@ -45,7 +46,7 @@ var Case3_HI_Alex = (function (self) {
                 {
                     "ID": "31",
                     "type": "info",
-                    "background": { "type": "image", "url": "3_1.jpg" },
+                    "background": { "type": "image", "url": "phone_bestFriend.jpg" },
                     "title": "",
                     "titlecenter": "true",
                     "text": "<div class='sms'>Kommer du ihåg i juli när vi spelade fotboll och jag fick ont i låret? Det är kvar... Jag tränar som vanligt men det går inte jättebra. Jag vill absolut inte hamna efter! Känns som att de andra undrar hur jag kunde komma in.. </div>",
@@ -82,7 +83,7 @@ var Case3_HI_Alex = (function (self) {
                 {
                     "ID": "33a1",
                     "type": "info",
-                    "background": { "type": "image", "url": "2_neutral.jpg" },
+                    "background": { "type": "image", "url": "lindat_thigh.jpg" },
                     "title": "",
                     "titlecenter": "true",
                     "textclass": "phototext",
@@ -93,7 +94,7 @@ var Case3_HI_Alex = (function (self) {
                 {
                     "ID": "33a2",
                     "type": "info",
-                    "background": { "type": "image", "url": "2_neutral.jpg" },
+                    "background": { "type": "image", "url": "lindat_thigh.jpg" },
                     "title": "",
                     "titlecenter": "true",
                     "textclass": "phototext",
@@ -104,9 +105,33 @@ var Case3_HI_Alex = (function (self) {
                 },
                 //END OF FORTSÄTTA TRÄNA SOM VANLIGT
 
-                //BERÄTTA FÖR TRÄNAREN
+                //SKADA ENDING
+                {
+                    "ID": "33abSkadaEnd1",
+                    "type": "info",
+                    "background": { "type": "image", "url": "bild_10.png" },
+                    "title": "",
+                    "titlecenter": "true",
+                    "textclass": "phototext",
+                    "text": "<span class='normaltext'>Då händer det som inte får hända...</span>",
+                    "navigationDirection": "fade",
+                    "showNextButton": "0",
+                },
+                {
+                    "ID": "33abSkadaEnd2",
+                    "type": "info",
+                    "background": { "type": "image", "url": "bild_3.png" },
+                    "title": "",
+                    "titlecenter": "true",
+                    "textclass": "phototext",
+                    "text": "<span class='normaltext'>På sista träningen innan IUSM håller inte baksidan för mer tryck utan den brister. Alex skriker ut sin smärta och tränaren kan snabbt se att Alex har dragit på sig en bristning i baksida lår. Nu väntar en rehab och ett långt uppehåll från träning, en marddröm för Alex som fått en tung start på gymnasiet.</span>",
+                    "navigationDirection": "fade",
+                    "gotoID": "34",
+                    "showNextButton": "0"
+                },
+                //END OF SHARED ENDING
 
-                //Skulle kunna börja med en "vad tror du tränaren känner?"
+                //BERÄTTA FÖR TRÄNAREN
                 {
                     "ID": "33b1",
                     "type": "info",
@@ -146,11 +171,11 @@ var Case3_HI_Alex = (function (self) {
                     "type": "question",
                     "question_id": "10",
                     "question": "Vad ska Alex göra?",
-                    "html": "<span class='normaltext'>Hur ska Alex göra med sin skada?</span>",
+                    "html": "<span class='normaltext'>Vad ska Alex göra?</span>",
                     "background": { "type": "image", "url": "gym.jpg" },
                     "answers": [
-                        { "text": "Avstå IUSM och slutföra sitt rehabprogram", "gotoID": "33b5a1" },
-                        { "text": "Lägga programmet åt sidan, träna fullt ut och delta i tävlingen", "gotoID": "33b5b1" },
+                        { "text": "Slutföra sitt Rehabprogram", "gotoID": "33b5a1" },
+                        { "text": "Träna fullt ut och lägga rehabprogrammet åt sidan", "gotoID": "33b5b1" },
                     ]
                     ,
                     "showNextButton": "-1"
@@ -163,7 +188,7 @@ var Case3_HI_Alex = (function (self) {
                     "title": "",
                     "titlecenter": "true",
                     "textclass": "phototext",
-                    "text": "<span class='normaltext'>Alex slutför sin rehab. Styrka och rörlighet i låret är helt tillbaka. Han missade IUSM men med utomhussäsongen i intåg där Alex imponerat på träningarna så kommer han att vara en av guldfavoriterna på IUSM i augusti.</span>",
+                    "text": "<span class='normaltext'>Alex slutför sin rehab och styrkan samt rörligheten i baksida lår är nu tillbaka i sin fulla kapacitet. Han missade IUSM men med utomhussäsongen i intåg där Alex imponerat på träningarna så kommer han att vara en av guldfavoriterna på IUSM i augusti.</span>",
                     "navigationDirection": "fade",
                     "gotoID": "34",
                     "showNextButton": "0"
@@ -178,42 +203,15 @@ var Case3_HI_Alex = (function (self) {
                     "title": "",
                     "titlecenter": "true",
                     "textclass": "phototext",
-                    "text": "<span class='normaltext'>Alex känner ju ingen smärta, så han börjar gå för fullt på träningarna med de andra i gruppen. Alex längtar efter IUSM</span>",
+                    "text": "<span class='normaltext'>Alex börjar gå för fullt på träningarna med övriga gruppen, eftersom han inte längre känner någon smärta. Alex är glad att han får träna med sina kompisar igen. Men efter några träningar börjar han få känningar i baksidan och måste börja om med ett nytt rehabprogram.</span>",
                     "navigationDirection": "fade",
-                    "gotoID": "33abSkadaEnd1",
+                    "gotoID": "34",
                     "showNextButton": "0",
                     "gotoIDBack": "33b4"
                 },
                 //END OF SLUTA MED REHAB OCH TÄVLA
 
                 //END OF BERÄTTA FÖR TRÄNAREN
-
-                //SHARED ENDING
-                {
-                    "ID": "33abSkadaEnd1",
-                    "type": "info",
-                    "background": { "type": "image", "url": "bild_10.png" },
-                    "title": "",
-                    "titlecenter": "true",
-                    "textclass": "phototext",
-                    "text": "<span class='normaltext'>Då händer det som inte får hända...</span>",
-                    "navigationDirection": "fade",
-                    "showNextButton": "0",
-                    "gotoIDBack": "33"
-                },
-                {
-                    "ID": "33abSkadaEnd2",
-                    "type": "info",
-                    "background": { "type": "image", "url": "bild_3.png" },
-                    "title": "",
-                    "titlecenter": "true",
-                    "textclass": "phototext",
-                    "text": "<span class='normaltext'>På sista träningen innan IUSM håller inte baksidan för mer tryck utan den brister. Alex skriker ut sin smärta och tränaren kan snabbt se att Alex har dragit på sig en bristning i baksida lår. Nu väntar en rehab och ett långt uppehåll från träning, en marddröm för Alex som fått en tung start på gymnasiet.</span>",
-                    "navigationDirection": "fade",
-                    "gotoID": "34",
-                    "showNextButton": "0"
-                },
-                //END OF SHARED ENDING
 
                 //Fakta om rehab 
                 {
