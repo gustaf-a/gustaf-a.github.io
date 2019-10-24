@@ -12,6 +12,7 @@
         <button onclick="myFunction()" class="dropbtn">Click to pick a country</button>
         <div id="myDropdown" class="dropdown-content">
             <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+<<<<<<< HEAD
             <div id="dropdownButtons">
                 <button onclick="changeImage('International Card')">International<br></button>
                 <button onclick="changeImage('International Card Spanish')">International Spanish<br></button>
@@ -81,6 +82,64 @@
                 <button onclick="changeImage('USA')">USA<br></button>
                 <button onclick="changeImage('Vietnam')">Vietnam<br></button>
             </div>
+=======
+            <button onclick="changeImage('Argentina')">Argentina</button><br>
+            <button onclick="changeImage('Australia')">Australia</button><br>
+            <button onclick="changeImage('Austria')">Austria</button><br>
+            <button onclick="changeImage('Belgium')">Belgium</button><br>
+            <button onclick="changeImage('Bosnia _ Herzegovina')">Bosnia _ Herzegovina</button><br>
+            <button onclick="changeImage('Brazil')">Brazil</button><br>
+            <button onclick="changeImage('Bulgaria')">Bulgaria</button><br>
+            <button onclick="changeImage('Chile')">Chile</button><br>
+            <button onclick="changeImage('Colombia')">Colombia</button><br>
+            <button onclick="changeImage('Costa Rica')">Costa Rica</button><br>
+            <button onclick="changeImage('Croatia')">Croatia</button><br>
+            <button onclick="changeImage('Czech Republic')">Czech Republic</button><br>
+            <button onclick="changeImage('Denmark')">Denmark</button><br>
+            <button onclick="changeImage('Ecuador')">Ecuador</button><br>
+            <button onclick="changeImage('El Salvador')">El Salvador</button><br>
+            <button onclick="changeImage('Estonia')">Estonia</button><br>
+            <button onclick="changeImage('Finland')">Finland</button><br>
+            <button onclick="changeImage('France')">France</button><br>
+            <button onclick="changeImage('Germany')">Germany</button><br>
+            <button onclick="changeImage('Greece')">Greece</button><br>
+            <button onclick="changeImage('Guatemala')">Guatemala</button><br>
+            <button onclick="changeImage('Hong Kong')">Hong Kong</button><br>
+            <button onclick="changeImage('Iceland')">Iceland</button><br>
+            <button onclick="changeImage('India')">India</button><br>
+            <button onclick="changeImage('Ireland')">Ireland</button><br>
+            <button onclick="changeImage('Israel')">Israel</button><br>
+            <button onclick="changeImage('Japan')">Japan</button><br>
+            <button onclick="changeImage('Latvia')">Latvia</button><br>
+            <button onclick="changeImage('Lebanon')">Lebanon</button><br>
+            <button onclick="changeImage('Lithuania')">Lithuania</button><br>
+            <button onclick="changeImage('Mexico')">Mexico</button><br>
+            <button onclick="changeImage('Montenegro')">Montenegro</button><br>
+            <button onclick="changeImage('Netherlands')">Netherlands</button><br>
+            <button onclick="changeImage('New Zealand')">New Zealand</button><br>
+            <button onclick="changeImage('Norway')">Norway</button><br>
+            <button onclick="changeImage('Panama')">Panama</button><br>
+            <button onclick="changeImage('Paraguay')">Paraguay</button><br>
+            <button onclick="changeImage('Peru')">Peru</button><br>
+            <button onclick="changeImage('Poland')">Poland</button><br>
+            <button onclick="changeImage('Portugal')">Portugal</button><br>
+            <button onclick="changeImage('Puerto Rico')">Puerto Rico</button><br>
+            <button onclick="changeImage('Romania')">Romania</button><br>
+            <button onclick="changeImage('Russia')">Russia</button><br>
+            <button onclick="changeImage('Serbia')">Serbia</button><br>
+            <button onclick="changeImage('Slovakia')">Slovakia</button><br>
+            <button onclick="changeImage('Slovenia')">Slovenia</button><br>
+            <button onclick="changeImage('South Africa')">South Africa</button><br>
+            <button onclick="changeImage('South Korea')">South Korea</button><br>
+            <button onclick="changeImage('Spain')">Spain</button><br>
+            <button onclick="changeImage('Sri Lanka')">Sri Lanka</button><br>
+            <button onclick="changeImage('Sweden')">Sweden</button><br>
+            <button onclick="changeImage('Taiwan')">Taiwan</button><br>
+            <button onclick="changeImage('Ukraine')">Ukraine</button><br>
+            <button onclick="changeImage('United Kingdom')">United Kingdom</button><br>
+            <button onclick="changeImage('Uruguay')">Uruguay</button><br>
+            <button onclick="changeImage('Vietnam')">Vietnam</button><br>
+>>>>>>> 2f64c02dcab515d2bcfcc4f37b225104a4ab522d
         </div>
     </div>
     <br>
@@ -105,6 +164,7 @@
         document.getElementById("myDropdown").classList.toggle("show");
     }
 
+<<<<<<< HEAD
     var hasUniqueCard = [
         "Argentina",
         "Brazil",
@@ -154,17 +214,27 @@
 
         var cubeCardImage = document.createElement('img');
         cubeCardImage.src = "images/" + cardImageName + ".png";
+=======
+    function changeImage(input) {
+        var cubeCardImage = document.createElement('img');
+        cubeCardImage.src = "images/" + input + ".png";
+>>>>>>> 2f64c02dcab515d2bcfcc4f37b225104a4ab522d
         displayDivElement.innerHTML = "";
         displayDivElement.appendChild(cubeCardImage);
 
         var heading = document.createElement('h2');
+<<<<<<< HEAD
         heading.innerText = inputCountry;
+=======
+        heading.innerText = input;
+>>>>>>> 2f64c02dcab515d2bcfcc4f37b225104a4ab522d
         displayHeadingElement.innerText = "";
         displayHeadingElement.appendChild(heading);
 
         document.getElementById("myDropdown").classList.toggle("show");
     }
 
+<<<<<<< HEAD
     function getCardFileName(inputCountry) {
         if (stringIsInArray(inputCountry, hasUniqueCard) == true) {
             return inputCountry;
@@ -182,6 +252,8 @@
         return false;
     }
 
+=======
+>>>>>>> 2f64c02dcab515d2bcfcc4f37b225104a4ab522d
     function filterFunction() {
         var input, filter, ul, li, a, i;
         input = document.getElementById("myInput");
@@ -190,6 +262,7 @@
         a = div.getElementsByTagName("button");
         for (i = 0; i < a.length; i++) {
             txtValue = a[i].textContent || a[i].innerText;
+<<<<<<< HEAD
             if ((txtValue.toUpperCase().indexOf(filter) > -1)) {
                 a[i].style.display = "";
             }
@@ -200,6 +273,13 @@
                 || (txtValue.toUpperCase().indexOf("STANDARD SPANISH") > -1)) {
                 a[i].style.display = "";
             }
+=======
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                a[i].style.display = "";
+            } else {
+                a[i].style.display = "none";
+            }
+>>>>>>> 2f64c02dcab515d2bcfcc4f37b225104a4ab522d
         }
     }
 
