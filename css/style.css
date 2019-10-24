@@ -21,29 +21,18 @@ img{
 
 /* Dropdown Button */
 .dropbtn {
-<<<<<<< HEAD
 	background-color: black;
 	color: white;
 	padding: 16px;
 	font-size: 16px;
 	border: solid white 3px;
-=======
-	background-color: white;
-	color: black;
-	padding: 16px;
-	font-size: 16px;
-	border: none;
->>>>>>> 2f64c02dcab515d2bcfcc4f37b225104a4ab522d
 	cursor: pointer;
   }
   
   /* Dropdown button on hover & focus */
   .dropbtn:hover, .dropbtn:focus {
 	background-color: white;
-<<<<<<< HEAD
 	color: black;
-=======
->>>>>>> 2f64c02dcab515d2bcfcc4f37b225104a4ab522d
   }
   
   /* The search field */
@@ -62,13 +51,8 @@ img{
 	  width: 100%;
 	  font-size: 16px;
 	  padding: 4px;
-<<<<<<< HEAD
 		background: white;
 		border: none;
-=======
-	  background: white;
-	  border: none;
->>>>>>> 2f64c02dcab515d2bcfcc4f37b225104a4ab522d
   }
   button:hover{
 	background: rgb(240, 240, 250);
@@ -88,7 +72,6 @@ img{
 	display: none;
 	position: absolute;
 	background-color: #f6f6f6;
-<<<<<<< HEAD
 	min-width: 200px;
 	border: 1px solid #ddd;
 	z-index: 1;
@@ -97,29 +80,16 @@ img{
   
   /* Links inside the dropdown */
   .dropdown-content button {
-=======
-	min-width: 230px;
-	border: 1px solid #ddd;
-	z-index: 1;
-  }
-  
-  /* Links inside the dropdown */
-  .dropdown-content a {
->>>>>>> 2f64c02dcab515d2bcfcc4f37b225104a4ab522d
 	color: black;
 	padding: 12px 16px;
 	text-decoration: none;
 	display: block;
-<<<<<<< HEAD
 	}
 	
 	#dropdownButtons {
 		overflow: auto;
 		max-height: 400px;
 	}
-=======
-  }
->>>>>>> 2f64c02dcab515d2bcfcc4f37b225104a4ab522d
   
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {background-color: #f1f1f1}
