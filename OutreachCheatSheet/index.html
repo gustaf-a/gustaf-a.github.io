@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Outreach Cheat Sheet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .outreach-advice-tab {
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outreach-advice-strategy-picker">
+        <ul id="advice-strategy-list" class="nav nav-tabs">
+            <li class="nav-item">
+                <a id="advice-strategy-classic" onclick="updateStrategy('classic')" href="#"
+                    class="nav-link active">Classic Questions</a>
+            </li>
+            <li class="nav-item">
+                <a id="advice-strategy-dog" onclick="updateStrategy('dog')" href="#" class="nav-link">Dog-Difference</a>
+            </li>
+        </ul>
+    </div>
+    <div class="outreach-advice-language-picker">
+        <ul id="advice-language-list" class="nav nav-tabs">
+            <li class="nav-item">
+                <a id="advice-language-english" onclick="updateLanguage('english')" href="#"
+                    class="nav-link active">English</a>
+            </li>
+            <li class="nav-item">
+                <a id="advice-language-swedish" onclick="updateLanguage('swedish')" href="#"
+                    class="nav-link">Svenska</a>
+            </li>
+        </ul>
+    </div>
+    <div class="outreach-advice-content">
+        <div id="outreach-advice-content">
+            <div id="outreach-advice-content-classic-english" class="strategy-content" style="display: block;">
+                <p>classic english</p>
+                <ol>
+                    <li>Have you seen these kinds of videos before?</li>
+                    <li>How does it make you feel? What is it that makes you feel …?</li>
+                    <li>Today in modern Sweden, do you think this is necessary? Do you think we need to eat meat, eggs, milk or cheese to survive and feel good?</li>
+                    <li>So, this makes us feel bad. We don’t like it. Also, we don’t need to eat meat, eggs, milk or cheese to live and feel good, so what do you think we can do to stop this?</li>
+                    <li>Is there anything stopping you from living vegan?</li>
+                </ol>
+            </div>
+            <div id="outreach-advice-content-classic-swedish" class="strategy-content" style="display: none;">
+                <p>classic swedish</p>
+                <ol>
+                    <li>Have you seen these kinds of videos before?</li>
+                    <li>How does it make you feel? What is it that makes you feel …?</li>
+                    <li>Today in modern Sweden, do you think this is necessary? Do you think we need to eat meat, eggs, milk or cheese to survive and feel good?</li>
+                    <li>So, this makes us feel bad. We don’t like it. Also, we don’t need to eat meat, eggs, milk or cheese to live and feel good, so what do you think we can do to stop this?</li>
+                    <li>Is there anything stopping you from living vegan?</li>
+                </ol>
+            </div>
+            <div id="outreach-advice-content-dog-english" class="strategy-content" style="display: none;">
+                <p>dog english</p>
+                Do you mind if I ask you a few questions about this?
+What do you think is the difference between a dog and a [insert animal]?
+Do you think this is necessary? Do we need to kill animals to survive?
+Imagine that I have a golden retriever that’s 6 months old. It has the best life possible and I love her. She could become 10-13 years old, but today when she’s 6 months old I really want to eat meat. I could eat something else, but I really like the taste of meat, so while she’s sleeping in my lap I kill her, without any pain. What do you think about this?
+I have a card here with a few resources. Dominion is especially important. If I gave you this card, would you think about this and look at it on your own?
+
+            </div>
+            <div id="outreach-advice-content-dog-swedish" class="strategy-content" style="display: none;">
+                <p>dog swedish</p>
+                Do you mind if I ask you a few questions about this?
+What do you think is the difference between a dog and a [insert animal]?
+Do you think this is necessary? Do we need to kill animals to survive?
+Imagine that I have a golden retriever that’s 6 months old. It has the best life possible and I love her. She could become 10-13 years old, but today when she’s 6 months old I really want to eat meat. I could eat something else, but I really like the taste of meat, so while she’s sleeping in my lap I kill her, without any pain. What do you think about this?
+I have a card here with a few resources. Dominion is especially important. If I gave you this card, would you think about this and look at it on your own?
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var pickedStrategy = "classic";
+        var pickedLanguage = "english";
+
+        function updateStrategy(strategy) {
+            pickedStrategy = strategy;
+            updateContent();
+        }
+
+        function updateLanguage(language) {
+            pickedLanguage = language;
+            updateContent();
+        }
+
+        function updateContent() {
+            updateOutreachSelectedTabs('strategy', pickedStrategy);
+            updateOutreachSelectedTabs('language', pickedLanguage);
+            updateOutreachAdviceContent();
+        }
+
+        function updateOutreachSelectedTabs(tabgroup, pickedValue) {
+            var list = document.getElementById("advice-" + tabgroup + "-list").getElementsByTagName("a");
+            for (let element of list) {
+                element.classList.remove('active');
+            }
+            document.getElementById("advice-" + tabgroup + "-" + pickedValue).classList.add('active');
+        }
+
+        function updateOutreachAdviceContent() {
+            hideAllWithClass("strategy-content");
+            document.getElementById("outreach-advice-content-" + pickedStrategy + "-" + pickedLanguage).style.display = "block";
+        }
+
+        function hideAllWithClass(className) {
+            var divsToHide = document.getElementsByClassName(className); //divsToHide is an array
+            for (var i = 0; i < divsToHide.length; i++) {
+                divsToHide[i].style.display = "none";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

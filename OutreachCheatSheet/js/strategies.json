@@ -1,0 +1,20 @@
+{
+    "classic": {
+        "name": "Classic",
+        "english": {
+            "innerHtml": "classic english"
+        },
+        "swedish": {
+            "innerHtml": "classic swedish"
+        }
+    },
+    "dog": {
+        "name": "Dog Approach",
+        "english": {
+            "innerHtml": "dog english"
+        },
+        "swedish": {
+            "innerHtml": "dog swedish"
+        }
+    }
+}
