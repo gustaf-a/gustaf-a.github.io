@@ -18,75 +18,169 @@
 </head>
 
 <body>
-    <div class="outreach-advice-strategy-picker">
-        <ul id="advice-strategy-list" class="nav nav-tabs">
-            <li class="nav-item">
-                <a id="advice-strategy-classic" onclick="updateStrategy('classic')" href="#"
-                    class="nav-link active">Classic Questions</a>
-            </li>
-            <li class="nav-item">
-                <a id="advice-strategy-dog" onclick="updateStrategy('dog')" href="#" class="nav-link">Dog-Difference</a>
-            </li>
-        </ul>
+    <div id="menu-big-div">
+        <div class="outreach-advice-strategy-picker">
+            <ul id="advice-strategy-list" class="nav nav-tabs">
+                <li class="nav-item">
+                    <a id="advice-strategy-all" onclick="updateStrategy('all')" href="#" class="nav-link active">All</a>
+                </li>
+                <li class="nav-item">
+                    <a id="advice-strategy-classic" onclick="updateStrategy('classic')" href="#"
+                        class="nav-link">Classic
+                        Questions</a>
+                </li>
+                <li class="nav-item">
+                    <a id="advice-strategy-dog" onclick="updateStrategy('dog')" href="#"
+                        class="nav-link">Dog-Difference</a>
+                </li>
+            </ul>
+        </div>
+        <div class="outreach-advice-language-picker">
+            <ul id="advice-language-list" class="nav nav-tabs">
+                <li class="nav-item">
+                    <a id="advice-language-all" onclick="updateLanguage('all')" href="#" class="nav-link active">All</a>
+                </li>
+                <li class="nav-item">
+                    <a id="advice-language-english" onclick="updateLanguage('english')" href="#"
+                        class="nav-link">English</a>
+                </li>
+                <li class="nav-item">
+                    <a id="advice-language-swedish" onclick="updateLanguage('swedish')" href="#"
+                        class="nav-link">Svenska</a>
+                </li>
+                <li class="nav-item">
+                    <a id="advice-language-french" onclick="updateLanguage('french')" href="#"
+                        class="nav-link">French</a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="outreach-advice-language-picker">
-        <ul id="advice-language-list" class="nav nav-tabs">
-            <li class="nav-item">
-                <a id="advice-language-english" onclick="updateLanguage('english')" href="#"
-                    class="nav-link active">English</a>
-            </li>
-            <li class="nav-item">
-                <a id="advice-language-swedish" onclick="updateLanguage('swedish')" href="#"
-                    class="nav-link">Svenska</a>
-            </li>
-        </ul>
-    </div>
-    <div class="outreach-advice-content">
+
+    <div class="outreach-advice-content-body-div">
         <div id="outreach-advice-content">
             <div id="outreach-advice-content-classic-english" class="strategy-content" style="display: block;">
                 <p>classic english</p>
                 <ol>
                     <li>Have you seen these kinds of videos before?</li>
                     <li>How does it make you feel? What is it that makes you feel …?</li>
-                    <li>Today in modern Sweden, do you think this is necessary? Do you think we need to eat meat, eggs, milk or cheese to survive and feel good?</li>
-                    <li>So, this makes us feel bad. We don’t like it. Also, we don’t need to eat meat, eggs, milk or cheese to live and feel good, so what do you think we can do to stop this?</li>
+                    <li>Today in modern Sweden, do you think this is necessary? Do you think we need to eat meat, eggs,
+                        milk or cheese to survive and feel good?</li>
+                    <li>So, this makes us feel bad. We don’t like it. Also, we don’t need to eat meat, eggs, milk or
+                        cheese to live and feel good, so what do you think we can do to stop this?</li>
                     <li>Is there anything stopping you from living vegan?</li>
                 </ol>
             </div>
-            <div id="outreach-advice-content-classic-swedish" class="strategy-content" style="display: none;">
+            <div id="outreach-advice-content-classic-swedish" class="strategy-content" style="display: block;">
                 <p>classic swedish</p>
                 <ol>
                     <li>Have you seen these kinds of videos before?</li>
                     <li>How does it make you feel? What is it that makes you feel …?</li>
-                    <li>Today in modern Sweden, do you think this is necessary? Do you think we need to eat meat, eggs, milk or cheese to survive and feel good?</li>
-                    <li>So, this makes us feel bad. We don’t like it. Also, we don’t need to eat meat, eggs, milk or cheese to live and feel good, so what do you think we can do to stop this?</li>
+                    <li>Today in modern Sweden, do you think this is necessary? Do you think we need to eat meat, eggs,
+                        milk or cheese to survive and feel good?</li>
+                    <li>So, this makes us feel bad. We don’t like it. Also, we don’t need to eat meat, eggs, milk or
+                        cheese to live and feel good, so what do you think we can do to stop this?</li>
                     <li>Is there anything stopping you from living vegan?</li>
                 </ol>
             </div>
-            <div id="outreach-advice-content-dog-english" class="strategy-content" style="display: none;">
-                <p>dog english</p>
-                Do you mind if I ask you a few questions about this?
-What do you think is the difference between a dog and a [insert animal]?
-Do you think this is necessary? Do we need to kill animals to survive?
-Imagine that I have a golden retriever that’s 6 months old. It has the best life possible and I love her. She could become 10-13 years old, but today when she’s 6 months old I really want to eat meat. I could eat something else, but I really like the taste of meat, so while she’s sleeping in my lap I kill her, without any pain. What do you think about this?
-I have a card here with a few resources. Dominion is especially important. If I gave you this card, would you think about this and look at it on your own?
-
+            <div id="outreach-advice-content-classic-french" class="strategy-content" style="display: block;">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        classic french
+                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">Have you seen these kinds of videos before?</li>
+                        <li class="list-group-item">How does it make you feel? What is it that makes you feel …?</li>
+                        <li class="list-group-item">Today in modern Sweden, do you think this is necessary? Do you think we need to eat meat, eggs,
+                            milk or cheese to survive and feel good?</li>
+                        <li class="list-group-item">So, this makes us feel bad. We don’t like it. Also, we don’t need to eat meat, eggs, milk or
+                            cheese to live and feel good, so what do you think we can do to stop this?</li>
+                        <li class="list-group-item">Is there anything stopping you from living vegan?</li>
+                    </ol>
+                </div>
             </div>
-            <div id="outreach-advice-content-dog-swedish" class="strategy-content" style="display: none;">
-                <p>dog swedish</p>
-                Do you mind if I ask you a few questions about this?
-What do you think is the difference between a dog and a [insert animal]?
-Do you think this is necessary? Do we need to kill animals to survive?
-Imagine that I have a golden retriever that’s 6 months old. It has the best life possible and I love her. She could become 10-13 years old, but today when she’s 6 months old I really want to eat meat. I could eat something else, but I really like the taste of meat, so while she’s sleeping in my lap I kill her, without any pain. What do you think about this?
-I have a card here with a few resources. Dominion is especially important. If I gave you this card, would you think about this and look at it on your own?
-
+            <div id="outreach-advice-content-dog-english" class="strategy-content" style="display: block;">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        dog english
+                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">Do you mind if I ask you a few questions about this?</li>
+                        <li class="list-group-item">What do you think is the difference between a dog and a [insert
+                            animal]?</li>
+                        <li class="list-group-item">Do you think this is necessary? Do we need to kill animals to
+                            survive?</li>
+                        <li class="list-group-item">Imagine that I have a golden retriever that’s 6 months old. It has
+                            the best life possible and I
+                            love her. She could become 10-13 years old, but today when she’s 6 months old I really want
+                            to
+                            eat meat. I could eat something else, but I really like the taste of meat, so while she’s
+                            sleeping in my lap I kill her, without any pain. What do you think about this?</li>
+                        <li class="list-group-item">I have a card here with a few resources. Dominion is especially
+                            important. If I gave you this
+                            card, would you think about this and look at it on your own?</li>
+                    </ol>
+                </div>
+            </div>
+            <div id="outreach-advice-content-dog-swedish" class="strategy-content" style="display: block;">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        dog swedish
+                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">Do you mind if I ask you a few questions about this?</li>
+                        <li class="list-group-item">What do you think is the difference between a dog and a [insert
+                            animal]?</li>
+                        <li class="list-group-item">Do you think this is necessary? Do we need to kill animals to
+                            survive?</li>
+                        <li class="list-group-item">Imagine that I have a golden retriever that’s 6 months old. It has
+                            the best life possible and I
+                            love her. She could become 10-13 years old, but today when she’s 6 months old I really want
+                            to
+                            eat meat. I could eat something else, but I really like the taste of meat, so while she’s
+                            sleeping in my lap I kill her, without any pain. What do you think about this?</li>
+                        <li class="list-group-item">I have a card here with a few resources. Dominion is especially
+                            important. If I gave you this
+                            card, would you think about this and look at it on your own?</li>
+                    </ol>
+                </div>
+            </div>
+            <div id="outreach-advice-content-dog-french" class="strategy-content" style="display: block;">
+                <div class="card" style="width: 100%;">
+                    <div class="card-header">
+                        dog french
+                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">Do you mind if I ask you a few questions about this?</li>
+                        <li class="list-group-item">What do you think is the difference between a dog and a [insert
+                            animal]?</li>
+                        <li class="list-group-item">Do you think this is necessary? Do we need to kill animals to
+                            survive?</li>
+                        <li class="list-group-item">Imagine that I have a golden retriever that’s 6 months old. It has
+                            the best life possible and I
+                            love her. She could become 10-13 years old, but today when she’s 6 months old I really want
+                            to
+                            eat meat. I could eat something else, but I really like the taste of meat, so while she’s
+                            sleeping in my lap I kill her, without any pain. What do you think about this?</li>
+                        <li class="list-group-item">I have a card here with a few resources. Dominion is especially
+                            important. If I gave you this
+                            card, would you think about this and look at it on your own?</li>
+                    </ol>
+                </div>
+            </div>
+            <div class="control-panel">
+                <button id="button-control-panel-toggle-menu" onclick="toggleMenu()" type="button"
+                    class="btn btn-secondary btn-sm">Hide Menu</button>
             </div>
         </div>
     </div>
 
     <script>
-        var pickedStrategy = "classic";
-        var pickedLanguage = "english";
+        const allPickedValue = "all";
+        var strategiesAvailable = ["classic", "dog"];
+        var languagesAvailable = ["english", "swedish", "french"];
+
+        var pickedStrategy = allPickedValue;
+        var pickedLanguage = allPickedValue;
 
         function updateStrategy(strategy) {
             pickedStrategy = strategy;
@@ -101,7 +195,8 @@ I have a card here with a few resources. Dominion is especially important. If I 
         function updateContent() {
             updateOutreachSelectedTabs('strategy', pickedStrategy);
             updateOutreachSelectedTabs('language', pickedLanguage);
-            updateOutreachAdviceContent();
+            hideAllWithClass("strategy-content");
+            showElement(pickedLanguage, pickedStrategy);
         }
 
         function updateOutreachSelectedTabs(tabgroup, pickedValue) {
@@ -112,18 +207,72 @@ I have a card here with a few resources. Dominion is especially important. If I 
             document.getElementById("advice-" + tabgroup + "-" + pickedValue).classList.add('active');
         }
 
-        function updateOutreachAdviceContent() {
-            hideAllWithClass("strategy-content");
-            document.getElementById("outreach-advice-content-" + pickedStrategy + "-" + pickedLanguage).style.display = "block";
-        }
+        const displayStyle = "block";
+        const rootAdviceString = "outreach-advice-content-";
 
-        function hideAllWithClass(className) {
-            var divsToHide = document.getElementsByClassName(className); //divsToHide is an array
-            for (var i = 0; i < divsToHide.length; i++) {
-                divsToHide[i].style.display = "none";
+        function showElement(language, strategy) {
+
+            let listOfLanguagesToIterate = []
+            let listOfStrategiesToIterate = []
+
+            if (strategy == allPickedValue) {
+                for (var i = 0; i < strategiesAvailable.length; i++) {
+                    listOfStrategiesToIterate[i] = strategiesAvailable[i];
+                }
+            } else {
+                listOfStrategiesToIterate[0] = strategy
+            }
+
+            if (language == allPickedValue) {
+                for (var i = 0; i < languagesAvailable.length; i++) {
+                    listOfLanguagesToIterate[i] = languagesAvailable[i];
+                }
+            } else {
+                listOfLanguagesToIterate[0] = language
+            }
+
+            let listOfIdsToShow = []
+
+            for (var i = 0; i < listOfStrategiesToIterate.length; i++) {
+                for (var j = 0; j < listOfLanguagesToIterate.length; j++) {
+                    document.getElementById(rootAdviceString + listOfStrategiesToIterate[i] + "-" + listOfLanguagesToIterate[j]).style.display = displayStyle;
+                }
             }
         }
 
+        function hideAllWithClass(className) {
+            var elementsToHide = document.getElementsByClassName(className);
+            for (var i = 0; i < elementsToHide.length; i++) {
+                elementsToHide[i].style.display = "none";
+            }
+        }
+
+        function toggleMenu() {
+            toggleMenuButtonText();
+            toggleMenuVisibility();
+        }
+
+        const menuButtonText = ["Hide Menu", "Show Menu"];
+        const menuButtonId = "button-control-panel-toggle-menu";
+
+        function toggleMenuButtonText() {
+            var currentText = document.getElementById(menuButtonId).innerHTML;
+            if (currentText == menuButtonText[0]) {
+                document.getElementById(menuButtonId).innerHTML = menuButtonText[1];
+                return;
+            }
+            document.getElementById(menuButtonId).innerHTML = menuButtonText[0];
+        }
+
+        const menuDivId = "menu-big-div";
+
+        function toggleMenuVisibility() {
+            if (document.getElementById(menuDivId).style.display == "none") {
+                document.getElementById(menuDivId).style.display = displayStyle;
+                return;
+            }
+            document.getElementById(menuDivId).style.display = "none";
+        }
     </script>
 </body>
 
