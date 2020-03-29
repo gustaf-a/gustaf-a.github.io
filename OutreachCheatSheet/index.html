@@ -14,6 +14,26 @@
         .outreach-advice-tab {
             margin: 20px;
         }
+
+        .card-header {
+            font-weight: bold;
+        }
+
+        .grey-half-transparent-bg {
+            background-color: rgba(125, 125, 125, 1)
+        }
+
+        .transparent-background {
+            background-color: rgba(250, 250, 250, 0);
+        }
+
+        .list-group-item {
+            background-color: rgba(250, 250, 250, 0);
+        }
+
+        .nav-link .nav-link.active {
+            background-color: rgba(250, 250, 250, 0);
+        }
     </style>
 </head>
 
@@ -22,7 +42,8 @@
         <div class="outreach-advice-strategy-picker">
             <ul id="advice-strategy-list" class="nav nav-tabs">
                 <li class="nav-item">
-                    <a id="advice-strategy-all" onclick="updateStrategy('all')" href="#" class="nav-link active">All</a>
+                    <a id="advice-strategy-all" onclick="updateStrategy('all')" href="#"
+                        class="nav-link active grey-half-transparent-bg">All</a>
                 </li>
                 <li class="nav-item">
                     <a id="advice-strategy-classic" onclick="updateStrategy('classic')" href="#"
@@ -38,7 +59,8 @@
         <div class="outreach-advice-language-picker">
             <ul id="advice-language-list" class="nav nav-tabs">
                 <li class="nav-item">
-                    <a id="advice-language-all" onclick="updateLanguage('all')" href="#" class="nav-link active">All</a>
+                    <a id="advice-language-all" onclick="updateLanguage('all')" href="#"
+                        class="nav-link active grey-half-transparent-bg">All</a>
                 </li>
                 <li class="nav-item">
                     <a id="advice-language-english" onclick="updateLanguage('english')" href="#"
@@ -59,109 +81,158 @@
     <div class="outreach-advice-content-body-div">
         <div id="outreach-advice-content">
             <div id="outreach-advice-content-classic-english" class="strategy-content" style="display: block;">
-                <p>classic english</p>
-                <ol>
-                    <li>Have you seen these kinds of videos before?</li>
-                    <li>How does it make you feel? What is it that makes you feel …?</li>
-                    <li>Today in modern Sweden, do you think this is necessary? Do you think we need to eat meat, eggs,
-                        milk or cheese to survive and feel good?</li>
-                    <li>So, this makes us feel bad. We don’t like it. Also, we don’t need to eat meat, eggs, milk or
-                        cheese to live and feel good, so what do you think we can do to stop this?</li>
-                    <li>Is there anything stopping you from living vegan?</li>
-                </ol>
-            </div>
-            <div id="outreach-advice-content-classic-swedish" class="strategy-content" style="display: block;">
-                <p>classic swedish</p>
-                <ol>
-                    <li>Have you seen these kinds of videos before?</li>
-                    <li>How does it make you feel? What is it that makes you feel …?</li>
-                    <li>Today in modern Sweden, do you think this is necessary? Do you think we need to eat meat, eggs,
-                        milk or cheese to survive and feel good?</li>
-                    <li>So, this makes us feel bad. We don’t like it. Also, we don’t need to eat meat, eggs, milk or
-                        cheese to live and feel good, so what do you think we can do to stop this?</li>
-                    <li>Is there anything stopping you from living vegan?</li>
-                </ol>
-            </div>
-            <div id="outreach-advice-content-classic-french" class="strategy-content" style="display: block;">
-                <div class="card" style="width: 100%;">
-                    <div class="card-header">
-                        classic french
+                <div class="card transparent-background" style="width: 100%;">
+                    <div class="card-header card-title">
+                        <h5 class="advice-content-headers">Classic Questions - English</h5>
                     </div>
                     <ol class="list-group list-group-flush">
-                        <li class="list-group-item">Have you seen these kinds of videos before?</li>
-                        <li class="list-group-item">How does it make you feel? What is it that makes you feel …?</li>
-                        <li class="list-group-item">Today in modern Sweden, do you think this is necessary? Do you think we need to eat meat, eggs,
-                            milk or cheese to survive and feel good?</li>
-                        <li class="list-group-item">So, this makes us feel bad. We don’t like it. Also, we don’t need to eat meat, eggs, milk or
+                        <li class="list-group-item">1. Have you seen these kinds of videos before?</li>
+                        <li class="list-group-item">2. How does it make you feel? What is it that makes you
+                            feel …?</li>
+                        <li class="list-group-item">3. Today in modern Sweden, do you think this is
+                            necessary? Do you think we need to eat meat, eggs, milk or cheese to survive and feel
+                            good?
+                        </li>
+                        <li class="list-group-item">4. So, this makes us feel bad. We don’t like it. Also,
+                            we don’t need
+                            to
+                            eat meat, eggs, milk or
                             cheese to live and feel good, so what do you think we can do to stop this?</li>
-                        <li class="list-group-item">Is there anything stopping you from living vegan?</li>
+                        <li class="list-group-item">5. Is there anything stopping you from living vegan?
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div id="outreach-advice-content-classic-swedish" class="strategy-content" style="display: block;">
+                <div class="card transparent-background" style="width: 100%;">
+                    <div class="card-header card-title">
+                        <h5 class="advice-content-headers">Classic Questions - Swedish</h5>
+                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">1. Have you seen these kinds of videos before?</li>
+                        <li class="list-group-item">2. How does it make you feel? What is it that makes you
+                            feel …?</li>
+                        <li class="list-group-item">3. Today in modern Sweden, do you think this is
+                            necessary? Do you
+                            think
+                            we need to eat meat, eggs,
+                            milk or cheese to survive and feel good?</li>
+                        <li class="list-group-item">4. So, this makes us feel bad. We don’t like it. Also,
+                            we don’t need
+                            to
+                            eat meat, eggs, milk or
+                            cheese to live and feel good, so what do you think we can do to stop this?</li>
+                        <li class="list-group-item">5. Is there anything stopping you from living vegan?
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div id="outreach-advice-content-classic-french" class="strategy-content" style="display: block;">
+                <div class="card transparent-background" style="width: 100%;">
+                    <div class="card-header card-title">
+                        <h5 class="advice-content-headers">Classic Questions - French</h5>
+                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">1. Have you seen these kinds of videos before?</li>
+                        <li class="list-group-item">2. How does it make you feel? What is it that makes you
+                            feel …?</li>
+                        <li class="list-group-item">3. Today in modern Sweden, do you think this is
+                            necessary? Do you
+                            think
+                            we need to eat meat, eggs,
+                            milk or cheese to survive and feel good?</li>
+                        <li class="list-group-item">4. So, this makes us feel bad. We don’t like it. Also,
+                            we don’t need
+                            to
+                            eat meat, eggs, milk or
+                            cheese to live and feel good, so what do you think we can do to stop this?</li>
+                        <li class="list-group-item">5. Is there anything stopping you from living vegan?
+                        </li>
                     </ol>
                 </div>
             </div>
             <div id="outreach-advice-content-dog-english" class="strategy-content" style="display: block;">
-                <div class="card" style="width: 100%;">
-                    <div class="card-header">
-                        dog english
+                <div class="card transparent-background" style="width: 100%;">
+                    <div class="card-header card-title">
+                        <h5 class="advice-content-headers">Dog Approach - English</h5>
                     </div>
                     <ol class="list-group list-group-flush">
-                        <li class="list-group-item">1. Do you mind if I ask you a few questions about this?</li>
-                        <li class="list-group-item">2. What do you think is the difference between a dog and a [insert
+                        <li class="list-group-item">1. Do you mind if I ask you a few questions about this?
+                        </li>
+                        <li class="list-group-item">2. What do you think is the difference between a dog
+                            and a [insert
                             animal]?</li>
-                        <li class="list-group-item">3. Do you think this is necessary? Do we need to kill animals to
+                        <li class="list-group-item">3. Do you think this is necessary? Do we need to kill
+                            animals to
                             survive?</li>
-                        <li class="list-group-item">4. Imagine that I have a golden retriever that’s 6 months old. It has
+                        <li class="list-group-item">4. Imagine that I have a golden retriever that’s 6
+                            months old. It
+                            has
                             the best life possible and I
                             love her. She could become 10-13 years old, but today when she’s 6 months old I really want
                             to
                             eat meat. I could eat something else, but I really like the taste of meat, so while she’s
                             sleeping in my lap I kill her, without any pain. What do you think about this?</li>
-                        <li class="list-group-item">5. I have a card here with a few resources. Dominion is especially
+                        <li class="list-group-item">5. I have a card here with a few resources. Dominion is
+                            especially
                             important. If I gave you this
                             card, would you think about this and look at it on your own?</li>
                     </ol>
                 </div>
             </div>
             <div id="outreach-advice-content-dog-swedish" class="strategy-content" style="display: block;">
-                <div class="card" style="width: 100%;">
+                <div class="card transparent-background" style="width: 100%;">
                     <div class="card-header">
-                        dog swedish
+                        <h5 class="advice-content-headers">Dog Approach - Swedish</h5>
                     </div>
                     <ol class="list-group list-group-flush">
-                        <li class="list-group-item">Do you mind if I ask you a few questions about this?</li>
-                        <li class="list-group-item">What do you think is the difference between a dog and a [insert
+                        <li class="list-group-item">1. Do you mind if I ask you a few questions about this?
+                        </li>
+                        <li class="list-group-item">2. What do you think is the difference between a dog
+                            and a [insert
                             animal]?</li>
-                        <li class="list-group-item">Do you think this is necessary? Do we need to kill animals to
+                        <li class="list-group-item">3. Do you think this is necessary? Do we need to kill
+                            animals to
                             survive?</li>
-                        <li class="list-group-item">Imagine that I have a golden retriever that’s 6 months old. It has
+                        <li class="list-group-item">4. Imagine that I have a golden retriever that’s 6
+                            months old. It
+                            has
                             the best life possible and I
                             love her. She could become 10-13 years old, but today when she’s 6 months old I really want
                             to
                             eat meat. I could eat something else, but I really like the taste of meat, so while she’s
                             sleeping in my lap I kill her, without any pain. What do you think about this?</li>
-                        <li class="list-group-item">I have a card here with a few resources. Dominion is especially
+                        <li class="list-group-item">5. I have a card here with a few resources. Dominion is
+                            especially
                             important. If I gave you this
                             card, would you think about this and look at it on your own?</li>
                     </ol>
                 </div>
             </div>
             <div id="outreach-advice-content-dog-french" class="strategy-content" style="display: block;">
-                <div class="card" style="width: 100%;">
+                <div class="card transparent-background" style="width: 100%;">
                     <div class="card-header">
-                        dog french
+                        <h5 class="advice-content-headers">Dog Approach - French</h5>
                     </div>
                     <ol class="list-group list-group-flush">
-                        <li class="list-group-item">Do you mind if I ask you a few questions about this?</li>
-                        <li class="list-group-item">What do you think is the difference between a dog and a [insert
+                        <li class="list-group-item">1. Do you mind if I ask you a few questions about this?
+                        </li>
+                        <li class="list-group-item">2. What do you think is the difference between a dog
+                            and a [insert
                             animal]?</li>
-                        <li class="list-group-item">Do you think this is necessary? Do we need to kill animals to
+                        <li class="list-group-item">3. Do you think this is necessary? Do we need to kill
+                            animals to
                             survive?</li>
-                        <li class="list-group-item">Imagine that I have a golden retriever that’s 6 months old. It has
+                        <li class="list-group-item">4. Imagine that I have a golden retriever that’s 6
+                            months old. It
+                            has
                             the best life possible and I
                             love her. She could become 10-13 years old, but today when she’s 6 months old I really want
                             to
                             eat meat. I could eat something else, but I really like the taste of meat, so while she’s
                             sleeping in my lap I kill her, without any pain. What do you think about this?</li>
-                        <li class="list-group-item">I have a card here with a few resources. Dominion is especially
+                        <li class="list-group-item">5. I have a card here with a few resources. Dominion is
+                            especially
                             important. If I gave you this
                             card, would you think about this and look at it on your own?</li>
                     </ol>
@@ -170,6 +241,12 @@
             <div class="control-panel">
                 <button id="button-control-panel-toggle-menu" onclick="toggleMenu()" type="button"
                     class="btn btn-secondary btn-sm">Hide Menu</button>
+                <button id="button-control-panel-toggle-darkmode" onclick="toggleDarkMode()" type="button"
+                    class="btn btn-secondary btn-sm">Dark Mode</button>
+                <!-- <button id="button-control-panel-text-smaller" onclick="changeFontSize(-2)" type="button"
+                    class="btn btn-secondary btn-sm">Smaller Text</button>
+                <button id="button-control-panel-text-bigger" onclick="changeFontSize(2)" type="button"
+                    class="btn btn-secondary btn-sm">Bigger Text</button> -->
             </div>
         </div>
     </div>
@@ -199,12 +276,19 @@
             showElement(pickedLanguage, pickedStrategy);
         }
 
+        const activeClassActive = 'active';
+        const activeClassGrey = 'grey-half-transparent-bg';
+
         function updateOutreachSelectedTabs(tabgroup, pickedValue) {
             var list = document.getElementById("advice-" + tabgroup + "-list").getElementsByTagName("a");
             for (let element of list) {
-                element.classList.remove('active');
+                element.classList.remove(activeClassActive);
+                element.classList.remove(activeClassGrey);
+                element.classList.remove(currentNotTextClass);
             }
-            document.getElementById("advice-" + tabgroup + "-" + pickedValue).classList.add('active');
+            document.getElementById("advice-" + tabgroup + "-" + pickedValue).classList.add(activeClassActive);
+            document.getElementById("advice-" + tabgroup + "-" + pickedValue).classList.add(activeClassGrey);
+            document.getElementById("advice-" + tabgroup + "-" + pickedValue).classList.add(currentTextClass);
         }
 
         const displayStyle = "block";
@@ -273,6 +357,46 @@
             }
             document.getElementById(menuDivId).style.display = "none";
         }
+
+        const backgroundColors = ["white", "black"];
+
+        const blackTextClasses = "text-dark";
+        const whiteTextClasses = "text-white";
+        var currentTextClass = blackTextClasses;
+        var currentNotTextClass = whiteTextClasses;
+
+        function toggleDarkMode() {
+            if (document.body.style.backgroundColor == backgroundColors[1]) {
+                document.body.style.backgroundColor = backgroundColors[0];
+                currentTextClass = blackTextClasses;
+                currentNotTextClass = whiteTextClasses;
+            } else {
+                document.body.style.backgroundColor = backgroundColors[1];
+                currentTextClass = whiteTextClasses;
+                currentNotTextClass = blackTextClasses;
+            }
+
+            updateTextClassOnElements("list-group-item");
+            updateTextClassOnElements("advice-content-headers");
+            updateTextClassOnElements("nav-link");
+            //setActiveTabBackground();
+        }
+
+        function updateTextClassOnElements(elementsClassName) {
+            elements = document.getElementsByClassName(elementsClassName);
+            for (let element of elements) {
+                element.classList.remove(currentNotTextClass);
+                element.classList.add(currentTextClass);
+            }
+        }
+
+        // function changeFontSize(valueChange) {
+        //     let elements = document.getElementsByClassName("text-element");
+        //     for (let element of elements) {
+        //         element.style.fontSize() += valueChange;
+        //     }
+        // }
+
     </script>
 </body>
 
