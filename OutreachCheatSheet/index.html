@@ -35,6 +35,13 @@
         .advice-content-headers {
             margin-bottom: 0;
         }
+
+        hr {
+            height: 2px;
+            color: rgba(125, 125, 125, 1);
+            background-color: rgba(125, 125, 125, 1);
+            border: none;
+        }
     </style>
 </head>
 
@@ -64,8 +71,7 @@
         <div class="outreach-advice-language-picker">
             <ul id="advice-language-list" class="nav nav-tabs">
                 <li class="nav-item">
-                    <a id="advice-language-all" onclick="updateLanguage('all')" href="#"
-                        class="nav-link">All</a>
+                    <a id="advice-language-all" onclick="updateLanguage('all')" href="#" class="nav-link">All</a>
                 </li>
                 <li class="nav-item">
                     <a id="advice-language-english" onclick="updateLanguage('english')" href="#"
@@ -88,195 +94,253 @@
     </div>
 
     <div class="outreach-advice-content-body-div">
-        <div id="outreach-advice-content">
 
+        <div id="outreach-advice-content-classic" class="strategy-content" style="display: block;">
+            <div class="card transparent-background" style="width: 100%;">
 
-            <div id="classic-questions">
+                <div class="card-header card-title">
+                    <h5 class="advice-content-headers">Classic Questions</h5>
+                </div>
+
                 <div id="outreach-advice-content-classic-english" class="strategy-content" style="display: block;">
-                    <div class="card transparent-background">
-                        <div class="card-header card-title">
-                            <h5 class="advice-content-headers">Classic Questions - English</h5>
-                        </div>
-                        <ol class="list-group list-group-flush">
-                            <li class="list-group-item">1. Have you seen these kinds of videos before?</li>
-                            <li class="list-group-item">2. How does it make you feel? What is it that makes you
-                                feel …?</li>
-                            <li class="list-group-item">3. Today in modern Sweden, do you think this is
-                                necessary? Do you think we need to eat meat, eggs, milk or cheese to survive and feel
-                                good?
-                            </li>
-                            <li class="list-group-item">4. So, this makes us feel bad. We don’t like it. Also,
-                                we don’t need
-                                to
-                                eat meat, eggs, milk or
-                                cheese to live and feel good, so what do you think we can do to stop this?</li>
-                            <li class="list-group-item">5. Is there anything stopping you from living vegan?
-                            </li>
-                        </ol>
-                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">1. Have you seen these kinds of videos before?</li>
+                        <li class="list-group-item">2. How does it make you feel? What is it that makes you
+                            feel …?</li>
+                        <li class="list-group-item">3. Today in modern Sweden, do you think this is
+                            necessary? Do you think we need to eat meat, eggs, milk or cheese to survive and
+                            feel
+                            good?
+                        </li>
+                        <li class="list-group-item">4. So, this makes us feel bad. We don’t like it. Also,
+                            we don’t need
+                            to
+                            eat meat, eggs, milk or
+                            cheese to live and feel good, so what do you think we can do to stop this?</li>
+                        <li class="list-group-item">5. Is there anything stopping you from living vegan?
+                        </li>
+                    </ol>
                 </div>
+
+                <div class="outreach-advice-content-classic-divider" style="display: none;">
+                    <hr>
+                </div>
+
                 <div id="outreach-advice-content-classic-swedish" class="strategy-content" style="display: none;">
-                    <div class="card transparent-background" style="width: 100%;">
-                        <div class="card-header card-title">
-                            <h5 class="advice-content-headers">Classic Questions - Swedish</h5>
-                        </div>
-                        <ol class="list-group list-group-flush">
-                            <li class="list-group-item">Not Yet Translated</li>
-                        </ol>
-                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">1. Har du sett såna här filmer förut?</li>
+                        <li class="list-group-item">2. Hur känns det när du ser det här? Vad är det som får dig känna
+                            så?</li>
+                        <li class="list-group-item">3. Idag i moderna Sverige, tror du att det här är nödvändigt? Tror
+                            du att vi måste äta kött, ägg, mjölk eller ost för att överleva och må bra?
+                        </li>
+                        <li class="list-group-item">4. Så, när vi ser det här mår vi dåligt. Vi tycker inte om det. Och,
+                            vi behöver inte äta kött, ägg, mjölk eller ost för att leva och må bra, så, vad tror du vi
+                            kan göra för att stoppa det här? </li>
+                        <li class="list-group-item">5. Finns det någonting som hindrar dig från att bli vegan?</li>
+                    </ol>
                 </div>
+
+                <div class="outreach-advice-content-classic-divider" style="display: none;">
+                    <hr>
+                </div>
+
                 <div id="outreach-advice-content-classic-french" class="strategy-content" style="display: none;">
-                    <div class="card transparent-background" style="width: 100%;">
-                        <div class="card-header card-title">
-                            <h5 class="advice-content-headers">Classic Questions - French</h5>
-                        </div>
-                        <ol class="list-group list-group-flush">
-                            <li class="list-group-item">Not Yet Translated</li>
-                        </ol>
-                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">Not Yet Translated French</li>
+                    </ol>
                 </div>
+
+                <div class="outreach-advice-content-classic-divider" style="display: none;">
+                    <hr>
+                </div>
+
                 <div id="outreach-advice-content-classic-spanish" class="strategy-content" style="display: none;">
-                    <div class="card transparent-background" style="width: 100%;">
-                        <div class="card-header">
-                            <h5 class="advice-content-headers">Classic Questions - Spanish</h5>
-                        </div>
-                        <ol class="list-group list-group-flush">
-                            <li class="list-group-item">Not Yet Translated</li>
-                        </ol>
-                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">Not Yet Translated Spanish</li>
+                    </ol>
                 </div>
             </div>
+        </div>
 
-            <div id="dog-approach">
+        <div id="outreach-advice-content-dog" class="strategy-content" style="display: block;">
+            <div class="card transparent-background" style="width: 100%;">
+
+                <div class="card-header card-title">
+                    <h5 class="advice-content-headers">Dog Approach</h5>
+                </div>
+
                 <div id="outreach-advice-content-dog-english" class="strategy-content" style="display: block;">
-                    <div class="card transparent-background" style="width: 100%;">
-                        <div class="card-header card-title">
-                            <h5 class="advice-content-headers">Dog Approach - English</h5>
-                        </div>
-                        <ol class="list-group list-group-flush">
-                            <li class="list-group-item">1. Do you mind if I ask you a few questions about this?
-                            </li>
-                            <li class="list-group-item">2. What do you think is the difference between a dog
-                                and a [insert
-                                animal]?</li>
-                            <li class="list-group-item">3. Do you think this is necessary? Do we need to kill
-                                animals to
-                                survive?</li>
-                            <li class="list-group-item">4. Imagine that I have a golden retriever that’s 6
-                                months old. It
-                                has
-                                the best life possible and I
-                                love her. She could become 10-13 years old, but today when she’s 6 months old I really
-                                want
-                                to
-                                eat meat. I could eat something else, but I really like the taste of meat, so while
-                                she’s
-                                sleeping in my lap I kill her, without any pain. What do you think about this?</li>
-                            <li class="list-group-item">5. I have a card here with a few resources. Dominion is
-                                especially
-                                important. If I gave you this
-                                card, would you think about this and look at it on your own?</li>
-                        </ol>
-                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">1. Do you mind if I ask you a few questions about this?
+                        </li>
+                        <li class="list-group-item">2. What do you think is the difference between a dog
+                            and a [insert
+                            animal]?</li>
+                        <li class="list-group-item">3. Do you think this is necessary? Do we need to kill
+                            animals to
+                            survive?</li>
+                        <li class="list-group-item">4. Imagine that I have a golden retriever that’s 6
+                            months old. She
+                            has
+                            the best life possible and I
+                            love her. She could become 10-13 years old, but today when she’s 6 months old I
+                            really
+                            want
+                            to
+                            eat meat. I could eat something else, but I really like the taste of meat, so
+                            while
+                            she’s
+                            sleeping in my lap I kill her, without any pain. What do you think about this?
+                        </li>
+                        <li class="list-group-item">5. I have a card here with a few resources. This is not information
+                            McDonalds or the dairy industry will give you. Dominion is
+                            especially important. If I give you this card, will you think about this and look at it on
+                            your own?</li>
+                    </ol>
                 </div>
+
+                <div class="outreach-advice-content-dog-divider" style="display: none;">
+                    <hr>
+                </div>
+
                 <div id="outreach-advice-content-dog-swedish" class="strategy-content" style="display: none;">
-                    <div class="card transparent-background" style="width: 100%;">
-                        <div class="card-header">
-                            <h5 class="advice-content-headers">Dog Approach - Swedish</h5>
-                        </div>
-                        <ol class="list-group list-group-flush">
-                            <li class="list-group-item">Not Yet Translated</li>
-                        </ol>
-                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">1. Är det ok om jag ställer några frågor om det här?</li>
+                        <li class="list-group-item">2. Vad tror du skillnaden är mellan en hund och en
+                            [gris/ko/kyckling/fisk/ett lamm]?</li>
+                        <li class="list-group-item">3. Tror du att det här är nödvändigt? Måste vi döda djur för att
+                            överleva?</li>
+                        <li class="list-group-item">4. Föreställ dig att jag har en golder retriever som är 6 månader
+                            gammal. Hon har det bästa möjliga livet och jag älskar henne. Hon skulle kunna bli 10-13 år
+                            gammal, men just idag, när hon är 6 månader gammal, vill jag verkligen äta kött. Jag skulle
+                            kunna äta någonting annat, men jag gillar verkligen smaken av kött, så när hon sover i mitt
+                            knä dödar jag henne, helt utan smärta. Vad känner du om det här?</li>
+                        <li class="list-group-item">5. Jag har ett kort här med information. Det här är inte
+                            information som McDonalds eller Arla kommer ge dig. Dominion är speciellt viktig.
+                            Om jag ger dig det här kortet, kommer du tänka på det här och kolla på det när du kommer
+                            hem?</li>
+                    </ol>
                 </div>
+
+                <div class="outreach-advice-content-dog-divider" style="display: none;">
+                    <hr>
+                </div>
+
                 <div id="outreach-advice-content-dog-french" class="strategy-content" style="display: none;">
-                    <div class="card transparent-background" style="width: 100%;">
-                        <div class="card-header">
-                            <h5 class="advice-content-headers">Dog Approach - French</h5>
-                        </div>
-                        <ol class="list-group list-group-flush">
-                            <li class="list-group-item">Not Yet Translated</li>
-                        </ol>
-                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">Not Yet Translated French</li>
+                    </ol>
                 </div>
+
+                <div class="outreach-advice-content-dog-divider" style="display: none;">
+                    <hr>
+                </div>
+
                 <div id="outreach-advice-content-dog-spanish" class="strategy-content" style="display: none;">
-                    <div class="card transparent-background" style="width: 100%;">
-                        <div class="card-header">
-                            <h5 class="advice-content-headers">Dog Approach - Spanish</h5>
-                        </div>
-                        <ol class="list-group list-group-flush">
-                            <li class="list-group-item">Not Yet Translated</li>
-                        </ol>
-                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">Not Yet Translated Spanish</li>
+                    </ol>
                 </div>
             </div>
+        </div>
 
-            <div id="five-questions">
+        <div id="outreach-advice-content-five-questions" class="strategy-content" style="display: block;">
+            <div class="card transparent-background" style="width: 100%;">
+
+                <div class="card-header card-title">
+                    <h5 class="advice-content-headers">Five Questions</h5>
+                </div>
+
                 <div id="outreach-advice-content-five-questions-english" class="strategy-content"
                     style="display: block;">
-                    <div class="card transparent-background" style="width: 100%;">
-                        <div class="card-header card-title">
-                            <h5 class="advice-content-headers">Five Questions - English</h5>
-                        </div>
-                        <ol class="list-group list-group-flush">
-                            <li class="list-group-item">1. Do you think animals are capable of suffering?</li>
-                            <li class="list-group-item">2. Do you ever want to be the reason an animal suffers when it’s
-                                not necessary?</li>
-                            <li class="list-group-item">3. Do you think animals suffer when we do this? When we exploit
-                                them for their flesh, milk, eggs, skin or fur?</li>
-                            <li class="list-group-item">4. Do you think it's necessary for us to consume the flesh,
-                                milk, egg, skin or fur from animals to survive or do we have viable alternatives?</li>
-                            <li class="list-group-item">5. So, animals are capable of suffering, you don’t want to be
-                                the reason an animal suffers, we think that animals suffer when we use them for meat,
-                                milk, egg, skin or fur, and it’s not necessary for us to consume these products. How do
-                                you morally justify continuing to pay for this to happen?</li>
-                        </ol>
-                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">1. Do you think animals are capable of
+                            suffering?
+                        </li>
+                        <li class="list-group-item">2. Do you ever want to be the reason an animal
+                            suffers when
+                            it’s
+                            not necessary?</li>
+                        <li class="list-group-item">3. Do you think animals suffer when we do this?
+                            When
+                            we
+                            exploit
+                            them for their flesh, milk, eggs, skin or fur?</li>
+                        <li class="list-group-item">4. Do you think it's necessary for us to consume
+                            the
+                            flesh,
+                            milk, egg, skin or fur from animals to survive or do we have viable
+                            alternatives?
+                        </li>
+                        <li class="list-group-item">5. So, animals are capable of suffering, you
+                            don’t
+                            want to
+                            be
+                            the reason an animal suffers, we think that animals suffer when we use
+                            them
+                            for
+                            meat,
+                            milk, egg, skin or fur, and it’s not necessary for us to consume these
+                            products. How
+                            do
+                            you morally justify continuing to pay for this to happen?</li>
+                    </ol>
                 </div>
+
+                <div class="outreach-advice-content-five-questions-divider" style="display: none;">
+                    <hr>
+                </div>
+
                 <div id="outreach-advice-content-five-questions-swedish" class="strategy-content"
                     style="display: none;">
-                    <div class="card transparent-background" style="width: 100%;">
-                        <div class="card-header">
-                            <h5 class="advice-content-headers">Five Questions - Swedish</h5>
-                        </div>
-                        <ol class="list-group list-group-flush">
-                            <li class="list-group-item">Not Yet Translated</li>
-                        </ol>
-                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">1. Tror du att djur kan känna smärta och lidande?</li>
+                        <li class="list-group-item">2. Vill du någonsin vara anledningen till att ett djur lider om det
+                            inte är nödvändigt?</li>
+                        <li class="list-group-item">3. Tror du att djur lider när vi utnyttjar dem för deras kött,
+                            mjölk, ägg, skinn eller päls?</li>
+                        <li class="list-group-item">4. Tror du att det är nödvändigt för oss att utnyttja djur för deras
+                            kött, mjölk, ägg, skinn och päls, eller har vi alternativ?</li>
+                        <li class="list-group-item">5. Så, djur kan känna smärta och lidande. Vi vill inte vara
+                            anledningen till att ett djur lider om det inte är nödvändigt. Djur lider när vi utnyttjar
+                            dem för kött, mjölk, ägg, skinn eller päls, och vi behöver inte de här sakerna för att leva
+                            och må bra. Hur kan vi moraliskt motivera att fortsätta betala för att det här ska hända?
+                        </li>
+                    </ol>
                 </div>
-                <div id="outreach-advice-content-five-questions-french" class="strategy-content"
-                    style="display: none;">
-                    <div class="card transparent-background" style="width: 100%;">
-                        <div class="card-header">
-                            <h5 class="advice-content-headers">Five Questions - French</h5>
-                        </div>
-                        <ol class="list-group list-group-flush">
-                            <li class="list-group-item">Not Yet Translated</li>
-                        </ol>
-                    </div>
+
+                <div class="outreach-advice-content-five-questions-divider" style="display: none;">
+                    <hr>
                 </div>
+
+                <div id="outreach-advice-content-five-questions-french" class="strategy-content" style="display: none;">
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">Not Yet Translated French</li>
+                    </ol>
+                </div>
+
+                <div class="outreach-advice-content-five-questions-divider" style="display: none;">
+                    <hr>
+                </div>
+
                 <div id="outreach-advice-content-five-questions-spanish" class="strategy-content"
                     style="display: none;">
-                    <div class="card transparent-background" style="width: 100%;">
-                        <div class="card-header">
-                            <h5 class="advice-content-headers">Five Questions - Spanish</h5>
-                        </div>
-                        <ol class="list-group list-group-flush">
-                            <li class="list-group-item">Not Yet Translated</li>
-                        </ol>
-                    </div>
+                    <ol class="list-group list-group-flush">
+                        <li class="list-group-item">Not Yet Translated Spanish</li>
+                    </ol>
                 </div>
             </div>
-            <br>
+        </div>
+        <br>
 
-            <div class="row">
-                <div class="col-1"></div>
-                <div class="control-panel">
-                    <button id="button-control-panel-toggle-menu" onclick="toggleMenu()" type="button"
-                        class="btn btn-secondary btn-sm">Hide Menu</button>
-                    <button id="button-control-panel-toggle-darkmode" onclick="toggleDarkMode()" type="button"
-                        class="btn btn-secondary btn-sm">Dark Mode</button>
-                </div>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="control-panel">
+                <button id="button-control-panel-toggle-menu" onclick="toggleMenu()" type="button"
+                    class="btn btn-secondary btn-sm">Hide Menu</button>
+                <button id="button-control-panel-toggle-darkmode" onclick="toggleDarkMode()" type="button"
+                    class="btn btn-secondary btn-sm">Dark Mode</button>
             </div>
         </div>
     </div>
@@ -302,7 +366,7 @@
         function updateContent() {
             updateOutreachSelectedTabs('strategy', pickedStrategy);
             updateOutreachSelectedTabs('language', pickedLanguage);
-            hideAllWithClass("strategy-content");
+            setDisplayOfAllWithClass("strategy-content", "none");
             showElement(pickedLanguage, pickedStrategy);
         }
 
@@ -328,6 +392,7 @@
 
             let listOfLanguagesToIterate = []
             let listOfStrategiesToIterate = []
+            let showDividerClass;
 
             if (strategy == allPickedValue) {
                 for (var i = 0; i < strategiesAvailable.length; i++) {
@@ -340,24 +405,28 @@
             if (language == allPickedValue) {
                 for (var i = 0; i < languagesAvailable.length; i++) {
                     listOfLanguagesToIterate[i] = languagesAvailable[i];
+                    showDividerClass = "block";
                 }
             } else {
                 listOfLanguagesToIterate[0] = language
+                showDividerClass = "none";
             }
 
             let listOfIdsToShow = []
 
             for (var i = 0; i < listOfStrategiesToIterate.length; i++) {
+                document.getElementById(rootAdviceString + listOfStrategiesToIterate[i]).style.display = displayStyle;
+                setDisplayOfAllWithClass(rootAdviceString + listOfStrategiesToIterate[i] + "-" + "divider", showDividerClass);
                 for (var j = 0; j < listOfLanguagesToIterate.length; j++) {
                     document.getElementById(rootAdviceString + listOfStrategiesToIterate[i] + "-" + listOfLanguagesToIterate[j]).style.display = displayStyle;
                 }
             }
         }
 
-        function hideAllWithClass(className) {
+        function setDisplayOfAllWithClass(className, displayStyle) {
             var elementsToHide = document.getElementsByClassName(className);
             for (var i = 0; i < elementsToHide.length; i++) {
-                elementsToHide[i].style.display = "none";
+                elementsToHide[i].style.display = displayStyle;
             }
         }
 
@@ -416,7 +485,7 @@
             setBackgroundOnElements("nav-link");
         }
 
-        function setInnerHtmlOfElement(elementId, innerHtmlToSet){
+        function setInnerHtmlOfElement(elementId, innerHtmlToSet) {
             document.getElementById(elementId).innerHTML = innerHtmlToSet;
         }
 
