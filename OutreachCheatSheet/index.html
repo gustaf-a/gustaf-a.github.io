@@ -401,10 +401,12 @@
                 currentBackground = backgroundColors[0];
                 currentTextClass = blackTextClasses;
                 currentNotTextClass = whiteTextClasses;
+                setInnerHtmlOfElement("button-control-panel-toggle-darkmode", "Dark Mode");
             } else {
                 currentBackground = backgroundColors[1];
                 currentTextClass = whiteTextClasses;
                 currentNotTextClass = blackTextClasses;
+                setInnerHtmlOfElement("button-control-panel-toggle-darkmode", "Light Mode");
             }
 
             document.body.style.backgroundColor = currentBackground;
@@ -412,6 +414,10 @@
             updateTextClassOnElements("advice-content-headers");
             updateTextClassOnElements("nav-link");
             setBackgroundOnElements("nav-link");
+        }
+
+        function setInnerHtmlOfElement(elementId, innerHtmlToSet){
+            document.getElementById(elementId).innerHTML = innerHtmlToSet;
         }
 
         function updateTextClassOnElements(elementsClassName) {
