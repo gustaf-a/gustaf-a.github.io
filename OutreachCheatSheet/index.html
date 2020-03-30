@@ -60,6 +60,10 @@
                     <a id="advice-strategy-dog" onclick="updateStrategy('dog')" href="#"
                         class="nav-link">Dog-Difference</a>
                 </li>
+                <li class="nav-item">
+                    <a id="advice-strategy-five-questions" onclick="updateStrategy('five-questions')" href="#"
+                        class="nav-link">5 Questions</a>
+                </li>
             </ul>
         </div>
         <div class="outreach-advice-language-picker">
@@ -80,170 +84,244 @@
                     <a id="advice-language-french" onclick="updateLanguage('french')" href="#"
                         class="nav-link">French</a>
                 </li>
+                <li class="nav-item">
+                    <a id="advice-language-spanish" onclick="updateLanguage('spanish')" href="#"
+                        class="nav-link">Spanish</a>
+                </li>
             </ul>
         </div>
     </div>
 
     <div class="outreach-advice-content-body-div">
         <div id="outreach-advice-content">
-            <div id="outreach-advice-content-classic-english" class="strategy-content" style="display: block;">
-                <div class="card transparent-background">
-                    <div class="card-header card-title">
-                        <h5 class="advice-content-headers">Classic Questions - English</h5>
+
+
+            <div id="classic-questions">
+                <div id="outreach-advice-content-classic-english" class="strategy-content" style="display: block;">
+                    <div class="card transparent-background">
+                        <div class="card-header card-title">
+                            <h5 class="advice-content-headers">Classic Questions - English</h5>
+                        </div>
+                        <ol class="list-group list-group-flush">
+                            <li class="list-group-item">1. Have you seen these kinds of videos before?</li>
+                            <li class="list-group-item">2. How does it make you feel? What is it that makes you
+                                feel …?</li>
+                            <li class="list-group-item">3. Today in modern Sweden, do you think this is
+                                necessary? Do you think we need to eat meat, eggs, milk or cheese to survive and feel
+                                good?
+                            </li>
+                            <li class="list-group-item">4. So, this makes us feel bad. We don’t like it. Also,
+                                we don’t need
+                                to
+                                eat meat, eggs, milk or
+                                cheese to live and feel good, so what do you think we can do to stop this?</li>
+                            <li class="list-group-item">5. Is there anything stopping you from living vegan?
+                            </li>
+                        </ol>
                     </div>
-                    <ol class="list-group list-group-flush">
-                        <li class="list-group-item">1. Have you seen these kinds of videos before?</li>
-                        <li class="list-group-item">2. How does it make you feel? What is it that makes you
-                            feel …?</li>
-                        <li class="list-group-item">3. Today in modern Sweden, do you think this is
-                            necessary? Do you think we need to eat meat, eggs, milk or cheese to survive and feel
-                            good?
-                        </li>
-                        <li class="list-group-item">4. So, this makes us feel bad. We don’t like it. Also,
-                            we don’t need
-                            to
-                            eat meat, eggs, milk or
-                            cheese to live and feel good, so what do you think we can do to stop this?</li>
-                        <li class="list-group-item">5. Is there anything stopping you from living vegan?
-                        </li>
-                    </ol>
+                </div>
+                <div id="outreach-advice-content-classic-swedish" class="strategy-content" style="display: block;">
+                    <div class="card transparent-background" style="width: 100%;">
+                        <div class="card-header card-title">
+                            <h5 class="advice-content-headers">Classic Questions - Swedish</h5>
+                        </div>
+                        <ol class="list-group list-group-flush">
+                            <li class="list-group-item">1. Have you seen these kinds of videos before?</li>
+                            <li class="list-group-item">2. How does it make you feel? What is it that makes you
+                                feel …?</li>
+                            <li class="list-group-item">3. Today in modern Sweden, do you think this is
+                                necessary? Do you
+                                think
+                                we need to eat meat, eggs,
+                                milk or cheese to survive and feel good?</li>
+                            <li class="list-group-item">4. So, this makes us feel bad. We don’t like it. Also,
+                                we don’t need
+                                to
+                                eat meat, eggs, milk or
+                                cheese to live and feel good, so what do you think we can do to stop this?</li>
+                            <li class="list-group-item">5. Is there anything stopping you from living vegan?
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="outreach-advice-content-classic-french" class="strategy-content" style="display: block;">
+                    <div class="card transparent-background" style="width: 100%;">
+                        <div class="card-header card-title">
+                            <h5 class="advice-content-headers">Classic Questions - French</h5>
+                        </div>
+                        <ol class="list-group list-group-flush">
+                            <li class="list-group-item">1. Have you seen these kinds of videos before?</li>
+                            <li class="list-group-item">2. How does it make you feel? What is it that makes you
+                                feel …?</li>
+                            <li class="list-group-item">3. Today in modern Sweden, do you think this is
+                                necessary? Do you
+                                think
+                                we need to eat meat, eggs,
+                                milk or cheese to survive and feel good?</li>
+                            <li class="list-group-item">4. So, this makes us feel bad. We don’t like it. Also,
+                                we don’t need
+                                to
+                                eat meat, eggs, milk or
+                                cheese to live and feel good, so what do you think we can do to stop this?</li>
+                            <li class="list-group-item">5. Is there anything stopping you from living vegan?
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="outreach-advice-content-classic-spanish" class="strategy-content" style="display: block;">
+                    <div class="card transparent-background" style="width: 100%;">
+                        <div class="card-header">
+                            <h5 class="advice-content-headers">Classic Questions - Spanish</h5>
+                        </div>
+                        <p>Not translated Yet</p>
+                    </div>
                 </div>
             </div>
-            <div id="outreach-advice-content-classic-swedish" class="strategy-content" style="display: block;">
-                <div class="card transparent-background" style="width: 100%;">
-                    <div class="card-header card-title">
-                        <h5 class="advice-content-headers">Classic Questions - Swedish</h5>
+
+            <div id="dog-approach">
+                <div id="outreach-advice-content-dog-english" class="strategy-content" style="display: block;">
+                    <div class="card transparent-background" style="width: 100%;">
+                        <div class="card-header card-title">
+                            <h5 class="advice-content-headers">Dog Approach - English</h5>
+                        </div>
+                        <ol class="list-group list-group-flush">
+                            <li class="list-group-item">1. Do you mind if I ask you a few questions about this?
+                            </li>
+                            <li class="list-group-item">2. What do you think is the difference between a dog
+                                and a [insert
+                                animal]?</li>
+                            <li class="list-group-item">3. Do you think this is necessary? Do we need to kill
+                                animals to
+                                survive?</li>
+                            <li class="list-group-item">4. Imagine that I have a golden retriever that’s 6
+                                months old. It
+                                has
+                                the best life possible and I
+                                love her. She could become 10-13 years old, but today when she’s 6 months old I really
+                                want
+                                to
+                                eat meat. I could eat something else, but I really like the taste of meat, so while
+                                she’s
+                                sleeping in my lap I kill her, without any pain. What do you think about this?</li>
+                            <li class="list-group-item">5. I have a card here with a few resources. Dominion is
+                                especially
+                                important. If I gave you this
+                                card, would you think about this and look at it on your own?</li>
+                        </ol>
                     </div>
-                    <ol class="list-group list-group-flush">
-                        <li class="list-group-item">1. Have you seen these kinds of videos before?</li>
-                        <li class="list-group-item">2. How does it make you feel? What is it that makes you
-                            feel …?</li>
-                        <li class="list-group-item">3. Today in modern Sweden, do you think this is
-                            necessary? Do you
-                            think
-                            we need to eat meat, eggs,
-                            milk or cheese to survive and feel good?</li>
-                        <li class="list-group-item">4. So, this makes us feel bad. We don’t like it. Also,
-                            we don’t need
-                            to
-                            eat meat, eggs, milk or
-                            cheese to live and feel good, so what do you think we can do to stop this?</li>
-                        <li class="list-group-item">5. Is there anything stopping you from living vegan?
-                        </li>
-                    </ol>
+                </div>
+                <div id="outreach-advice-content-dog-swedish" class="strategy-content" style="display: block;">
+                    <div class="card transparent-background" style="width: 100%;">
+                        <div class="card-header">
+                            <h5 class="advice-content-headers">Dog Approach - Swedish</h5>
+                        </div>
+                        <ol class="list-group list-group-flush">
+                            <li class="list-group-item">1. Do you mind if I ask you a few questions about this?
+                            </li>
+                            <li class="list-group-item">2. What do you think is the difference between a dog
+                                and a [insert
+                                animal]?</li>
+                            <li class="list-group-item">3. Do you think this is necessary? Do we need to kill
+                                animals to
+                                survive?</li>
+                            <li class="list-group-item">4. Imagine that I have a golden retriever that’s 6
+                                months old. It
+                                has
+                                the best life possible and I
+                                love her. She could become 10-13 years old, but today when she’s 6 months old I really
+                                want
+                                to
+                                eat meat. I could eat something else, but I really like the taste of meat, so while
+                                she’s
+                                sleeping in my lap I kill her, without any pain. What do you think about this?</li>
+                            <li class="list-group-item">5. I have a card here with a few resources. Dominion is
+                                especially
+                                important. If I gave you this
+                                card, would you think about this and look at it on your own?</li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="outreach-advice-content-dog-french" class="strategy-content" style="display: block;">
+                    <div class="card transparent-background" style="width: 100%;">
+                        <div class="card-header">
+                            <h5 class="advice-content-headers">Dog Approach - French</h5>
+                        </div>
+                        <ol class="list-group list-group-flush">
+                            <li class="list-group-item">1. Do you mind if I ask you a few questions about this?
+                            </li>
+                            <li class="list-group-item">2. What do you think is the difference between a dog
+                                and a [insert
+                                animal]?</li>
+                            <li class="list-group-item">3. Do you think this is necessary? Do we need to kill
+                                animals to
+                                survive?</li>
+                            <li class="list-group-item">4. Imagine that I have a golden retriever that’s 6
+                                months old. It
+                                has
+                                the best life possible and I
+                                love her. She could become 10-13 years old, but today when she’s 6 months old I really
+                                want
+                                to
+                                eat meat. I could eat something else, but I really like the taste of meat, so while
+                                she’s
+                                sleeping in my lap I kill her, without any pain. What do you think about this?</li>
+                            <li class="list-group-item">5. I have a card here with a few resources. Dominion is
+                                especially
+                                important. If I gave you this
+                                card, would you think about this and look at it on your own?</li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="outreach-advice-content-dog-spanish" class="strategy-content" style="display: block;">
+                    <div class="card transparent-background" style="width: 100%;">
+                        <div class="card-header">
+                            <h5 class="advice-content-headers">Dog Approach - Spanish</h5>
+                        </div>
+                        <p>Not translated Yet</p>
+                    </div>
                 </div>
             </div>
-            <div id="outreach-advice-content-classic-french" class="strategy-content" style="display: block;">
-                <div class="card transparent-background" style="width: 100%;">
-                    <div class="card-header card-title">
-                        <h5 class="advice-content-headers">Classic Questions - French</h5>
+
+            <div id="five-questions">
+                <div id="outreach-advice-content-five-questions-english" class="strategy-content"
+                    style="display: block;">
+                    <div class="card transparent-background" style="width: 100%;">
+                        <div class="card-header card-title">
+                            <h5 class="advice-content-headers">Five Questions - English</h5>
+                        </div>
+                        <p>Not translated Yet</p>
                     </div>
-                    <ol class="list-group list-group-flush">
-                        <li class="list-group-item">1. Have you seen these kinds of videos before?</li>
-                        <li class="list-group-item">2. How does it make you feel? What is it that makes you
-                            feel …?</li>
-                        <li class="list-group-item">3. Today in modern Sweden, do you think this is
-                            necessary? Do you
-                            think
-                            we need to eat meat, eggs,
-                            milk or cheese to survive and feel good?</li>
-                        <li class="list-group-item">4. So, this makes us feel bad. We don’t like it. Also,
-                            we don’t need
-                            to
-                            eat meat, eggs, milk or
-                            cheese to live and feel good, so what do you think we can do to stop this?</li>
-                        <li class="list-group-item">5. Is there anything stopping you from living vegan?
-                        </li>
-                    </ol>
+                </div>
+                <div id="outreach-advice-content-five-questions-swedish" class="strategy-content"
+                    style="display: block;">
+                    <div class="card transparent-background" style="width: 100%;">
+                        <div class="card-header">
+                            <h5 class="advice-content-headers">Five Questions - Swedish</h5>
+                        </div>
+                        <p>Not translated Yet</p>
+                    </div>
+                </div>
+                <div id="outreach-advice-content-five-questions-french" class="strategy-content"
+                    style="display: block;">
+                    <div class="card transparent-background" style="width: 100%;">
+                        <div class="card-header">
+                            <h5 class="advice-content-headers">Five Questions - French</h5>
+                        </div>
+                        <p>Not translated Yet</p>
+                    </div>
+                </div>
+                <div id="outreach-advice-content-five-questions-spanish" class="strategy-content"
+                    style="display: block;">
+                    <div class="card transparent-background" style="width: 100%;">
+                        <div class="card-header">
+                            <h5 class="advice-content-headers">Five Questions - Spanish</h5>
+                        </div>
+                        <p>Not translated Yet</p>
+                    </div>
                 </div>
             </div>
-            <div id="outreach-advice-content-dog-english" class="strategy-content" style="display: block;">
-                <div class="card transparent-background" style="width: 100%;">
-                    <div class="card-header card-title">
-                        <h5 class="advice-content-headers">Dog Approach - English</h5>
-                    </div>
-                    <ol class="list-group list-group-flush">
-                        <li class="list-group-item">1. Do you mind if I ask you a few questions about this?
-                        </li>
-                        <li class="list-group-item">2. What do you think is the difference between a dog
-                            and a [insert
-                            animal]?</li>
-                        <li class="list-group-item">3. Do you think this is necessary? Do we need to kill
-                            animals to
-                            survive?</li>
-                        <li class="list-group-item">4. Imagine that I have a golden retriever that’s 6
-                            months old. It
-                            has
-                            the best life possible and I
-                            love her. She could become 10-13 years old, but today when she’s 6 months old I really want
-                            to
-                            eat meat. I could eat something else, but I really like the taste of meat, so while she’s
-                            sleeping in my lap I kill her, without any pain. What do you think about this?</li>
-                        <li class="list-group-item">5. I have a card here with a few resources. Dominion is
-                            especially
-                            important. If I gave you this
-                            card, would you think about this and look at it on your own?</li>
-                    </ol>
-                </div>
-            </div>
-            <div id="outreach-advice-content-dog-swedish" class="strategy-content" style="display: block;">
-                <div class="card transparent-background" style="width: 100%;">
-                    <div class="card-header">
-                        <h5 class="advice-content-headers">Dog Approach - Swedish</h5>
-                    </div>
-                    <ol class="list-group list-group-flush">
-                        <li class="list-group-item">1. Do you mind if I ask you a few questions about this?
-                        </li>
-                        <li class="list-group-item">2. What do you think is the difference between a dog
-                            and a [insert
-                            animal]?</li>
-                        <li class="list-group-item">3. Do you think this is necessary? Do we need to kill
-                            animals to
-                            survive?</li>
-                        <li class="list-group-item">4. Imagine that I have a golden retriever that’s 6
-                            months old. It
-                            has
-                            the best life possible and I
-                            love her. She could become 10-13 years old, but today when she’s 6 months old I really want
-                            to
-                            eat meat. I could eat something else, but I really like the taste of meat, so while she’s
-                            sleeping in my lap I kill her, without any pain. What do you think about this?</li>
-                        <li class="list-group-item">5. I have a card here with a few resources. Dominion is
-                            especially
-                            important. If I gave you this
-                            card, would you think about this and look at it on your own?</li>
-                    </ol>
-                </div>
-            </div>
-            <div id="outreach-advice-content-dog-french" class="strategy-content" style="display: block;">
-                <div class="card transparent-background" style="width: 100%;">
-                    <div class="card-header">
-                        <h5 class="advice-content-headers">Dog Approach - French</h5>
-                    </div>
-                    <ol class="list-group list-group-flush">
-                        <li class="list-group-item">1. Do you mind if I ask you a few questions about this?
-                        </li>
-                        <li class="list-group-item">2. What do you think is the difference between a dog
-                            and a [insert
-                            animal]?</li>
-                        <li class="list-group-item">3. Do you think this is necessary? Do we need to kill
-                            animals to
-                            survive?</li>
-                        <li class="list-group-item">4. Imagine that I have a golden retriever that’s 6
-                            months old. It
-                            has
-                            the best life possible and I
-                            love her. She could become 10-13 years old, but today when she’s 6 months old I really want
-                            to
-                            eat meat. I could eat something else, but I really like the taste of meat, so while she’s
-                            sleeping in my lap I kill her, without any pain. What do you think about this?</li>
-                        <li class="list-group-item">5. I have a card here with a few resources. Dominion is
-                            especially
-                            important. If I gave you this
-                            card, would you think about this and look at it on your own?</li>
-                    </ol>
-                </div>
-            </div>
+
+
             <div class="row">
                 <div class="col-1"></div>
                 <div class="control-panel">
@@ -262,8 +340,8 @@
 
     <script>
         const allPickedValue = "all";
-        var strategiesAvailable = ["classic", "dog"];
-        var languagesAvailable = ["english", "swedish", "french"];
+        var strategiesAvailable = ["classic", "dog", "five-questions"];
+        var languagesAvailable = ["english", "swedish", "french", "spanish"];
 
         var pickedStrategy = allPickedValue;
         var pickedLanguage = allPickedValue;
