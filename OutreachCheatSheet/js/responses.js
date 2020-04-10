@@ -1,31 +1,92 @@
 var responses = `{
     "classic": {
         "english": [
-            "Approach people so they can see you. Just go forward and don't be nervous to start. Don't hesitate to talk 20-30 seconds to get a relation with the person.", 
+            "This is just one of many openers. It's not that that important what people say.", 
             "Give people some time to feel and think about it. Common responses are bad, sad, angry. This is a good time to tell a small story about what you felt the first time you saw these things.", 
             "Many respond by thinking for a while and then saying no. This is an important time to relate with 'feel, felt, found'", 
             "There are two main ways: 1. We can stop giving money to the industry, 2. We can help spread information to more people by being active. Online, on the streets or to friends and family.", 
             "Common answers are: 'not really', 'family', 'I can eat less meat', 'will it really make a difference?'. Remember that the important thing is what happens after they leave. Will they by themselves look for information or not?"],
         "swedish": [
-            "Fråga 1", 
-            "Fråga 2", 
-            "Fråga 3", 
-            "Fråga 4", 
-            "Fråga 5"]
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written."
+        ],
+        "french": [
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written."
+        ],
+        "spanish": [
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written."    
+        ]
     },
     "dog": {
         "english": [
-            "Question 1",
-            "Q2",
-            "Question 3",
-            "Question 4",
-            "Question 5"
+            "Sometimes people actually ask now ",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written."
         ],
-        "swedish": ["Fråga 1", "Fråga 2", "Fråga 3 dog", "Fråga 4", "Fråga 5"]
+        "swedish": [
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written."
+        ],
+        "french": [
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written."
+        ],
+        "spanish": [
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written."    
+        ]
     },
     "fivequestions": {
-        "english": ["Question 1", "Q2", "Question 3", "Question 4", "Question 5"],
-        "swedish": ["Fråga 1", "Fråga 2", "Fråga 3", "Fråga 4", "Fråga 5"]
+        "english": [
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written."
+        ],
+        "swedish": [
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written."
+        ],
+        "french": [
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written."
+        ],
+        "spanish": [
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written.",
+            "Common response not yet written."    
+        ]
     }
 }`;
 
@@ -37,14 +98,14 @@ var responsesObject = JSON.parse(responses);
 function getQuestionResponseClicked(listItemClicked) {
     var responseText;
     var listItem = $(listItemClicked);
-    
+
     if (listItem.children(".classic-response")[0].innerText == "") {
         var parentDivIdArray = getParentDivId(listItem);
         responseText = getQuestionResponse(parentDivIdArray[3], parentDivIdArray[4], listItem[0].innerText.charAt(0));
-        listItem.find(">:first-child").attr("src","open-iconic/svg/chevron-top.svg");
+        listItem.find(">:first-child").attr("src", "open-iconic/svg/chevron-top.svg");
     } else {
         responseText = "";
-        listItem.find(">:first-child").attr("src","open-iconic/svg/chevron-bottom.svg");
+        listItem.find(">:first-child").attr("src", "open-iconic/svg/chevron-bottom.svg");
     }
     listItem.find(">:last-child").toggleClass("mt-3");
     listItem.children(".classic-response")[0].innerText = responseText;
