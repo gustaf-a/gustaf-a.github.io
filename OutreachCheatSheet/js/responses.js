@@ -60,7 +60,7 @@ var responses = `{
     },
     "fivequestions": {
         "english": [
-            "This usually only get's a short yes, so be prepared to pose the next question straight away.",
+            "This is not the first question to ask someone when approaching. First it's good to start with another opening question, but this can be the second or third questions. This usually only get's a short yes, so be prepared to pose the next question straight away.",
             "Many people react in a way that makes it useful to repeat the question and really stress the word 'necessary'",
             "It's useful to point towards the screen while posing this question.",
             "Most people say we have alternatives, but be prepared to meet people who believe it's necessary.",
@@ -94,43 +94,75 @@ const failedResponseMessage = "Error when finding response";
 
 var responsesObject = JSON.parse(responses);
 
-//div id="outreach-advice-content-classic-english"
-function getQuestionResponseClicked(listItemClicked) {
-    var responseText;
-    var listItem = $(listItemClicked);
+var responseMarginClass = "mt-3";
 
-    if (listItem.children(".classic-response")[0].innerText == "") {
-        var parentDivIdArray = getParentDivId(listItem);
-        responseText = getQuestionResponse(parentDivIdArray[3], parentDivIdArray[4], listItem[0].innerText.charAt(0));
-        listItem.find(">:first-child").attr("src", "open-iconic/svg/chevron-top.svg");
-    } else {
-        responseText = "";
-        listItem.find(">:first-child").attr("src", "open-iconic/svg/chevron-bottom.svg");
+
+$(document).ready(function () {
+    //TODO: Hide all question response
+    $(".question-response").hide();
+    $(".question-response").addClass(responseMarginClass);
+
+    $(".outreach-question").click(function () {
+        getQuestionResponseClicked(this);
+    });
+
+    //TODO: Populate all question responses
+    console.log("Ready called");
+    fillAllResponses();
+});
+
+function fillAllResponses() {
+    $(".question-response").each(function (i) {
+        var parentDivIdArray = this.parentNode.parentNode.parentNode.id.split("-");
+        this.innerText = getQuestionResponse(parentDivIdArray[3], parentDivIdArray[4], this.parentNode.innerText.charAt(0));
     }
-    listItem.find(">:last-child").toggleClass("mt-3");
-    listItem.children(".classic-response")[0].innerText = responseText;
+    )
 }
 
-function getParentDivId(listItem) {
-    return listItem.closest("div")[0].id.split("-");
+//div id="outreach-advice-content-classic-english"
+function getQuestionResponseClicked(listItemClicked) {
+    let questionResponseDiv = $(listItemClicked).find(">:last-child")[0];
+    toggleListItemsResponseShownFromDiv(questionResponseDiv);
+}
+
+const questionSrcArrowClickToShow = "open-iconic/svg/chevron-bottom.svg";
+const questionSrcArrowClickToHide = "open-iconic/svg/chevron-top.svg";
+
+function toggleListItemsResponseShownFromDiv(questionResponseDiv) {
+    if (questionResponseDiv.style.display == "none") {
+        $(questionResponseDiv).show();
+        $(questionResponseDiv.parentNode).find(">:first-child").attr("src", questionSrcArrowClickToHide);
+    } else {
+        $(questionResponseDiv).hide();
+        $(questionResponseDiv.parentNode).find(">:first-child").attr("src", questionSrcArrowClickToShow);
+    }
+}
+
+var responsesShown = false;
+
+function toggleShowAllResponses() {
+    if (responsesShown) {
+        $(".question-response").hide();
+        $(".question-response-icon-arrow").attr("src", questionSrcArrowClickToShow);
+        responsesShown = false;
+    } else {
+        $(".question-response").show();
+        $(".question-response-icon-arrow").attr("src", questionSrcArrowClickToHide);
+        responsesShown = true;
+    }
 }
 
 function getQuestionResponse(question, language, questionNumber) {
     if (question === "classic") {
         return getQuestionResponseFromObject(responsesObject.classic, language, questionNumber);
     }
-
     if (question === "dog") {
         return getQuestionResponseFromObject(responsesObject.dog, language, questionNumber);
     }
-
     if (question === "fivequestions") {
         return getQuestionResponseFromObject(responsesObject.fivequestions, language, questionNumber);
     }
-
     return failedResponseMessage + ": Bad Question - " + question;
-
-    // console.log(responsesObject.classic.english[questionNumber-1]);
 }
 
 function getQuestionResponseFromObject(questionObject, language, number) {
@@ -152,8 +184,9 @@ function getQuestionResponseFromObject(questionObject, language, number) {
             return questionObject.spanish[number];
         }
     } catch (error) {
-
+        return "Not yet written";
     }
 
     return failedResponseMessage + ": Bad language and number - " + language + ", " + number;
+
 }

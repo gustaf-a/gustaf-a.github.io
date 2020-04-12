@@ -64,8 +64,6 @@ function showElement(language, strategy) {
         showDividerClass = "none";
     }
 
-    let listOfIdsToShow = []
-
     for (var i = 0; i < listOfStrategiesToIterate.length; i++) {
         document.getElementById(rootAdviceString + listOfStrategiesToIterate[i]).style.display = displayStyle;
         setDisplayOfAllWithClass(rootAdviceString + listOfStrategiesToIterate[i] + "-" + "divider", showDividerClass);
