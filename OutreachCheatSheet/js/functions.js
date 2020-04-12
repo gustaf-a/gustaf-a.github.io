@@ -1,5 +1,5 @@
 const allPickedValue = "all";
-var strategiesAvailable = ["classic", "dog", "fivequestions"];
+var strategiesAvailable = ["classic", "dog", "fivequestions, kids"];
 var languagesAvailable = ["english", "swedish", "french", "spanish"];
 
 var pickedStrategy = allPickedValue;
