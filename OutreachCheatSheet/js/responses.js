@@ -106,7 +106,6 @@ $(document).ready(function () {
         getQuestionResponseClicked(this);
     });
 
-    //TODO: Populate all question responses
     console.log("Ready called");
     fillAllResponses();
 });

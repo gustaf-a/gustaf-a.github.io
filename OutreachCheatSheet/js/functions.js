@@ -153,3 +153,9 @@ function setBackgroundOnElements(elementsClassName) {
         element.style.backgroundColor = currentBackground;
     }
 }
+
+function changeFontSize(sizeChange){
+    var fontSize = parseInt($("body").css("font-size"));
+    fontSize = fontSize + sizeChange + "px";
+    $("body").css({'font-size':fontSize});
+}
