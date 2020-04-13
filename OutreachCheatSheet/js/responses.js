@@ -35,27 +35,6 @@ var responses = `{
             "Many respond by thinking for a while and then saying no. However, this question is important to know the facts around. This is a good time to relate with 'feel, felt, found' and point to official organizations for example Academy of Nutrition and Dietetics or movies such as The Game Changers",
             "Almost everyone will agree that this is wrong without excuses. It's a good moment to point out that this example is the best possible scenario for the meat industry.",
             "If the person you're talking to doesn't agree to check out the resouces, thank them for their honesty and ask them why."
-        ],
-        "swedish": [
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written."
-        ],
-        "french": [
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written."
-        ],
-        "spanish": [
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written."    
         ]
     },
     "fivequestions": {
@@ -65,32 +44,21 @@ var responses = `{
             "It's useful to point towards the screen while posing this question.",
             "Most people say we have alternatives, but be prepared to meet people who believe it's necessary.",
             "If they don't object, it's a good opportunity to coach them into watching a documentary. Even if they agree completely with the arguments, it's most of the time not enough for real change."
-        ],
-        "swedish": [
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written."
-        ],
-        "french": [
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written."
-        ],
-        "spanish": [
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written.",
-            "Common response not yet written."    
+        ]
+    },
+    "kids": {
+        "english": [
+            "This is not the first question to ask someone when approaching. First it's good to start with another opening question, but this can be the second or third questions. This usually only get's a short yes, so be prepared to pose the next question straight away.",
+            "Many people react in a way that makes it useful to repeat the question and really stress the word 'necessary'",
+            "It's useful to point towards the screen while posing this question.",
+            "Most people say we have alternatives, but be prepared to meet people who believe it's necessary.",
+            "If they don't object, it's a good opportunity to coach them into watching a documentary. Even if they agree completely with the arguments, it's most of the time not enough for real change."
         ]
     }
 }`;
 
 const failedResponseMessage = "Error when finding response";
+const noResponseMessage = "Common response not yet written.";
 
 var responsesObject = JSON.parse(responses);
 
@@ -98,7 +66,6 @@ var responseMarginClass = "mt-3";
 
 
 $(document).ready(function () {
-    //TODO: Hide all question response
     $(".question-response").hide();
     $(".question-response").addClass(responseMarginClass);
 
@@ -161,11 +128,34 @@ function getQuestionResponse(question, language, questionNumber) {
     if (question === "fivequestions") {
         return getQuestionResponseFromObject(responsesObject.fivequestions, language, questionNumber);
     }
+    if (question === "kids") {
+        return getQuestionResponseFromObject(responsesObject.fivequestions, language, questionNumber);
+    }
+    if (question === "farmers") {
+        return getQuestionResponseFromObject(responsesObject.farmers, language, questionNumber);
+    }
+    if (question === "christians") {
+        return getQuestionResponseFromObject(responsesObject.christians, language, questionNumber);
+    }
+    if (question === "muslims") {
+        return getQuestionResponseFromObject(responsesObject.muslims, language, questionNumber);
+    }
+    if (question === "vegetarians") {
+        return getQuestionResponseFromObject(responsesObject.vegetarians, language, questionNumber);
+    }
+    if (question === "vegans") {
+        return getQuestionResponseFromObject(responsesObject.vegans, language, questionNumber);
+    }
     return failedResponseMessage + ": Bad Question - " + question;
 }
 
 function getQuestionResponseFromObject(questionObject, language, number) {
     number--;
+
+    if(questionObject == null) {
+        return noResponseMessage;
+    }
+
     try {
         if (language == "english") {
             return questionObject.english[number];
@@ -183,7 +173,8 @@ function getQuestionResponseFromObject(questionObject, language, number) {
             return questionObject.spanish[number];
         }
     } catch (error) {
-        return "Not yet written";
+        console.log(error);
+        return noResponseMessage;
     }
 
     return failedResponseMessage + ": Bad language and number - " + language + ", " + number;

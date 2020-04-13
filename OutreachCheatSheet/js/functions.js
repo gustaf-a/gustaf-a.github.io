@@ -1,5 +1,5 @@
 const allPickedValue = "all";
-var strategiesAvailable = ["classic", "dog", "fivequestions, kids"];
+var strategiesAvailable = ["classic", "dog", "fivequestions", "kids", "farmers", "christians", "muslims", "vegetarians", "vegans"];
 var languagesAvailable = ["english", "swedish", "french", "spanish"];
 
 var pickedStrategy = allPickedValue;
@@ -32,6 +32,7 @@ function updateOutreachSelectedTabs(tabgroup, pickedValue) {
         element.classList.remove(activeClassGrey);
         element.classList.remove(currentNotTextClass);
     }
+    console.log("advice-" + tabgroup + "-" + pickedValue);
     document.getElementById("advice-" + tabgroup + "-" + pickedValue).classList.add(activeClassActive);
     document.getElementById("advice-" + tabgroup + "-" + pickedValue).classList.add(activeClassGrey);
     document.getElementById("advice-" + tabgroup + "-" + pickedValue).classList.add(currentTextClass);
