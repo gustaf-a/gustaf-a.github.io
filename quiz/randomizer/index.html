@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Outreach Cheat Sheet</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        .outreach-advice-tab {
+            margin: 20px;
+        }
+
+        .card-header {
+            font-weight: bold;
+            background-color: rgba(125, 125, 125, .2);
+        }
+
+        .grey-half-transparent-bg {
+            background-color: rgba(125, 125, 125, 1)
+        }
+
+        .transparent-background {
+            background-color: rgba(250, 250, 250, 0);
+        }
+
+        .list-group-item {
+            background-color: rgba(250, 250, 250, 0);
+            border: 1px solid rgba(125, 125, 125, .2);
+        }
+
+        .advice-content-headers {
+            margin-bottom: 0;
+        }
+
+        hr {
+            height: 2px;
+            color: rgba(125, 125, 125, 1);
+            background-color: rgba(125, 125, 125, 1);
+            border: none;
+        }
+
+
+        .selectedChampionClass {
+            display: inline;
+            color: red;
+        }
+
+        .hiddenClass {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu-big-div">
+        <div id="championpicker-bar">
+            <ul id="championpicker-list" class="nav nav-tabs">
+                <li class="nav-item">
+                    <a id="champion-select-0" onclick="selectChampion(this)" href="#" class="nav-link"></a> </li>
+                <li class="nav-item">
+                    <a id="champion-select-1" onclick="selectChampion(this)" href="#" class="nav-link"></a> </li>
+                <li class="nav-item">
+                    <a id="champion-select-2" onclick="selectChampion(this)" href="#" class="nav-link"></a> </li>
+                <li class="nav-item">
+                    <a id="champion-select-3" onclick="selectChampion(this)" href="#" class="nav-link"></a> </li>
+                <li class="nav-item">
+                    <a id="champion-select-4" onclick="selectChampion(this)" href="#" class="nav-link"></a> </li>
+                <li class="nav-item">
+                    <a id="champion-select-5" onclick="selectChampion(this)" href="#" class="nav-link"></a> </li>
+                <li class="nav-item">
+                    <a id="champion-select-6" onclick="selectChampion(this)" href="#" class="nav-link"></a> </li>
+                <li class="nav-item">
+                    <a id="champion-select-7" onclick="selectChampion(this)" href="#" class="nav-link"></a> </li>
+                <li class="nav-item">
+                    <a id="champion-select-8" onclick="selectChampion(this)" href="#" class="nav-link"></a> </li>
+                <li class="nav-item">
+                    <a id="champion-select-9" onclick="selectChampion(this)" href="#" class="nav-link"></a> </li>
+            </ul>
+        </div>
+
+        <div id="championToMove">
+            <img id="championToMove-image" src="" alt="">
+            <span id="championToMove-text">Initial value</span>
+        </div>
+
+        <div id="allPickedChampions">
+            <span id="champion-picked-0" class="championPicked"></span>
+            <span id="champion-picked-1" class="championPicked"></span>
+            <span id="champion-picked-2" class="championPicked" display="none"></span>
+            <span id="champion-picked-3" class="championPicked" display="none"></span>
+            <span id="champion-picked-4" class="championPicked" display="none"></span>
+            <span id="champion-picked-5" class="championPicked" display="none"></span>
+            <span id="champion-picked-6" class="championPicked" display="none"></span>
+            <span id="champion-picked-7" class="championPicked" display="none"></span>
+            <span id="champion-picked-8" class="championPicked" display="none"></span>
+            <span id="champion-picked-9" class="championPicked" display="none"></span>
+        </div>
+
+        <br>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="control-panel">
+                <button id="button-control-panel-toggle-menu" onclick="findNextToMove(1000)" type="button"
+                    class="btn btn-secondary btn-sm">Next Move Fast</button>
+                <button id="button-control-panel-toggle-menu" onclick="findNextToMove(2000)" type="button"
+                    class="btn btn-secondary btn-sm">Next Move Normal</button>
+                <button id="button-control-panel-toggle-menu" onclick="findNextToMove(4000)" type="button"
+                    class="btn btn-secondary btn-sm">Next Move Slow</button>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="control-panel">
+                <button id="button-control-panel-toggle-menu" onclick="toggleMenu()" type="button"
+                    class="btn btn-secondary btn-sm">Toggle Menu</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var champions = [
+            "Killer Chicken",
+            "champion 1",
+            "champion 2",
+            "champion 3",
+            "champion 4",
+            "champion 5",
+            "champion 6",
+            "champion 7",
+            "champion 8",
+            "champion 9"
+        ];
+
+        var selectedChampions = new Map();
+
+
+
+        fillInChampionNames();
+
+        function fillInChampionNames() {
+            for (var i = 0; i < champions.length; i++) {
+                $("#champion-select-" + i)[0].text = champions[i];
+                $("#champion-picked-" + i)[0].innerHTML = champions[i];
+            }
+        }
+
+        const activeClassActive = 'active';
+        const activeClassGrey = 'grey-half-transparent-bg';
+
+        function toggleTabSelected(tab) {
+            $(tab).toggleClass(activeClassActive)
+            $(tab).toggleClass(activeClassGrey)
+        }
+
+        function selectChampion(theItemClicked) {
+
+            if (selectedChampions.has(theItemClicked.text)) {
+                selectedChampions.delete(theItemClicked.text);
+            } else {
+                selectedChampions.set(theItemClicked.text, getChampionIdFromElementId(theItemClicked.id));
+            }
+
+            toggleTabSelected(theItemClicked);
+
+            refreshChampionsShowed();
+        }
+
+        function getChampionIdFromElementId(idString) {
+            return idString.slice(idString.length - 1);
+        }
+
+        const selectedChampionClass = "selectedChampionClass";
+        const hiddenClass = "hiddenClass";
+        const championToMove = "championToMove";
+
+        function refreshChampionsShowed() {
+            hideAllPickedChampions();
+
+            for (let [key, value] of selectedChampions) {
+                $("#champion-picked-" + value).addClass(selectedChampionClass);
+                $("#champion-picked-" + value).removeClass(hiddenClass);
+            }
+        }
+
+        hideAllPickedChampions();
+
+        function hideAllPickedChampions() {
+            for (var i = 0; i < champions.length; i++) {
+                $("#champion-picked-" + i)[0].classList.remove(selectedChampionClass);
+                $("#champion-picked-" + i)[0].classList.add(hiddenClass);
+            }
+        }
+
+        function toggleMenu() {
+            $("#championpicker-bar").toggleClass(hiddenClass);
+        }
+
+        let championToMoveNext;
+        let championTextId;
+
+        function findNextToMove(time) {
+            championTextId = "#" + championToMove + "-text";
+
+            if (selectedChampions.size > 0) {
+                $(championTextId)[0].innerHTML = "Finding next champion to move";
+                let number = Math.floor(Math.random() * selectedChampions.size);
+                championToMoveNext = findMapEntryNumber(selectedChampions, number);
+                setTimeout(updateChampionToMoveText, time);
+            } else { 
+                $(championTextId)[0].innerHTML = "Pick champions";
+            }
+        }
+
+        function findMapEntryNumber(map, number){
+            var values = selectedChampions.values();
+            for (var i = 0; i < number; i++) {
+                values.next().value;
+            }
+            return values.next().value;
+        }
+
+        function updateChampionToMoveText(){
+            $(championTextId)[0].innerHTML = champions[findMapEntryNumber(selectedChampions, championToMoveNext)];
+        }
+
+    </script>
+</body>
+
+</html>
