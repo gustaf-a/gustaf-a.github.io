@@ -81,11 +81,13 @@
         </div>
 
         <div id="championToMove">
-            <img id="championToMove-image" src="" alt="">
-            <span id="championToMove-text">Initial value</span>
+            <div style="height: 400px">
+                <img id="championToMove-image" src="" alt="" class="mh-100">
+            </div>
+            <h1 id="championToMove-text">No champions picked</h1>
         </div>
 
-        <div id="allPickedChampions">
+        <div id="allPickedChampions" display="none">
             <span id="champion-picked-0" class="championPicked"></span>
             <span id="champion-picked-1" class="championPicked"></span>
             <span id="champion-picked-2" class="championPicked" display="none"></span>
@@ -101,13 +103,13 @@
         <br>
         <div class="row">
             <div class="col-1"></div>
-            <div class="control-panel">
-                <button id="button-control-panel-toggle-menu" onclick="findNextToMove(1000)" type="button"
-                    class="btn btn-secondary btn-sm">Next Move Fast</button>
-                <button id="button-control-panel-toggle-menu" onclick="findNextToMove(2000)" type="button"
-                    class="btn btn-secondary btn-sm">Next Move Normal</button>
-                <button id="button-control-panel-toggle-menu" onclick="findNextToMove(4000)" type="button"
-                    class="btn btn-secondary btn-sm">Next Move Slow</button>
+            <div id="control-panel-findNextMove" class="control-panel">
+                <button id="button-findNextMove-fast" onclick="findNextToMove(500)" type="button"
+                    class="btn-primary btn-sm nextToMoveButton">Next Move Fast</button>
+                <button id="button-findNextMove-normal" onclick="findNextToMove(2000)" type="button"
+                    class="btn-primary btn-sm nextToMoveButton">Next Move Normal</button>
+                <button id="button-findNextMove-slow" onclick="findNextToMove(4000)" type="button"
+                    class="btn-primary btn-sm nextToMoveButton">Next Move Slow</button>
             </div>
         </div>
         <br>
@@ -115,28 +117,39 @@
             <div class="col-1"></div>
             <div class="control-panel">
                 <button id="button-control-panel-toggle-menu" onclick="toggleMenu()" type="button"
-                    class="btn btn-secondary btn-sm">Toggle Menu</button>
+                    class="btn-primary btn-sm">Toggle Menu</button>
             </div>
         </div>
     </div>
 
     <script>
         var champions = [
-            "Killer Chicken",
-            "champion 1",
-            "champion 2",
-            "champion 3",
-            "champion 4",
-            "champion 5",
-            "champion 6",
-            "champion 7",
-            "champion 8",
-            "champion 9"
+            "Penny the Painless Plant",
+            "Archangel Michael - Leader of God's armies",
+            "Ganesha",
+            "The World Turtle - A’Tuin",
+            "An Asian Killer Chicken",
+            "An Endless Toilet Roll",
+            "POSEIDON - Ruler of the Seas",
+            "MOTHER RUSSIA",
+            "Harry Fucking Potter",
+            "Mickey Mouse & His Evil Laugh"
+        ];
+
+        var championsImages = [
+            "plantmonster.jpg",
+            "archangel.jpg",
+            "ganesha.png",
+            "turtle.png",
+            "chicken.jpg",
+            "toilet.jpg",
+            "poseidon.jpg",
+            "russia.jpg",
+            "potter.jpg",
+            "mickey.jpg",
         ];
 
         var selectedChampions = new Map();
-
-
 
         fillInChampionNames();
 
@@ -200,30 +213,52 @@
 
         let championToMoveNext;
         let championTextId;
+        championTextId = "#" + championToMove + "-text";
+        let championImageId;
+        championImageId = "#" + championToMove + "-image";
 
         function findNextToMove(time) {
-            championTextId = "#" + championToMove + "-text";
+
+
+            
 
             if (selectedChampions.size > 0) {
+                enableToMoveButtons(false);
+                $(championImageId).attr("src", "img/unknown.jpg");
                 $(championTextId)[0].innerHTML = "Finding next champion to move";
                 let number = Math.floor(Math.random() * selectedChampions.size);
                 championToMoveNext = findMapEntryNumber(selectedChampions, number);
                 setTimeout(updateChampionToMoveText, time);
-            } else { 
+                
+                enableToMoveButtons(true);
+            } else {
                 $(championTextId)[0].innerHTML = "Pick champions";
             }
         }
 
-        function findMapEntryNumber(map, number){
+        function findMapEntryNumber(map, number) {
             var values = selectedChampions.values();
+
             for (var i = 0; i < number; i++) {
                 values.next().value;
             }
             return values.next().value;
         }
+        function enableToMoveButtons(enableButtons) {
+            $("nextToMoveButton").prop('disabled', !enableButtons);
 
-        function updateChampionToMoveText(){
-            $(championTextId)[0].innerHTML = champions[findMapEntryNumber(selectedChampions, championToMoveNext)];
+            if(enableButtons){
+                $("nextToMoveButton").addClass("btn-primary");
+                $("nextToMoveButton").removeClass("btn-secondary");
+            } else{
+                $("nextToMoveButton").removeClass("btn-primary");
+                $("nextToMoveButton").addClass("btn-secondary");
+            }
+        }
+
+        function updateChampionToMoveText() {
+            $(championTextId)[0].innerHTML = champions[championToMoveNext];
+            $(championImageId).attr("src", "img/" + championsImages[championToMoveNext]);
         }
 
     </script>
