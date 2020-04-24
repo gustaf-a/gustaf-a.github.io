@@ -50,6 +50,10 @@
         .hiddenClass {
             display: none;
         }
+
+        img {
+            width: 100%;
+        }
     </style>
 </head>
 
@@ -80,24 +84,24 @@
             </ul>
         </div>
 
-        <div id="championToMove">
-            <div style="height: 400px">
-                <img id="championToMove-image" src="" alt="" class="mh-100">
-            </div>
-            <h1 id="championToMove-text">No champions picked</h1>
+        <div id="championToMove" class="justify-content-center row">
+                <div class="col-8">
+                    <img id="championToMove-image" src="" alt="" class="mh-100">
+                </div>
+                <h1 id="championToMove-text">No champions picked</h1>
         </div>
 
-        <div id="allPickedChampions" display="none">
-            <span id="champion-picked-0" class="championPicked"></span>
-            <span id="champion-picked-1" class="championPicked"></span>
-            <span id="champion-picked-2" class="championPicked" display="none"></span>
-            <span id="champion-picked-3" class="championPicked" display="none"></span>
-            <span id="champion-picked-4" class="championPicked" display="none"></span>
-            <span id="champion-picked-5" class="championPicked" display="none"></span>
-            <span id="champion-picked-6" class="championPicked" display="none"></span>
-            <span id="champion-picked-7" class="championPicked" display="none"></span>
-            <span id="champion-picked-8" class="championPicked" display="none"></span>
-            <span id="champion-picked-9" class="championPicked" display="none"></span>
+        <div class="row justify-content-md-center" id="allPickedChampions">
+            <div id="champion-picked-0" class="col-2 championPicked"></div>
+            <div id="champion-picked-1" class="col-2 championPicked"></div>
+            <div id="champion-picked-2" class="col-2 championPicked"></div>
+            <div id="champion-picked-3" class="col-2 championPicked"></div>
+            <div id="champion-picked-4" class="col-2 championPicked"></div>
+            <div id="champion-picked-5" class="col-2 championPicked"></div>
+            <div id="champion-picked-6" class="col-2 championPicked"></div>
+            <div id="champion-picked-7" class="col-2 championPicked"></div>
+            <div id="champion-picked-8" class="col-2 championPicked"></div>
+            <div id="champion-picked-9" class="col-2 championPicked"></div>
         </div>
 
         <br>
@@ -149,6 +153,8 @@
             "mickey.jpg",
         ];
 
+        const championPickedInnerHtml = "<img class=\"img-fluid\" src=\"img/¤¤¤\">";
+
         var selectedChampions = new Map();
 
         fillInChampionNames();
@@ -156,7 +162,7 @@
         function fillInChampionNames() {
             for (var i = 0; i < champions.length; i++) {
                 $("#champion-select-" + i)[0].text = champions[i];
-                $("#champion-picked-" + i)[0].innerHTML = champions[i];
+                $("#champion-picked-" + i)[0].innerHTML = championPickedInnerHtml.replace("¤¤¤", championsImages[i]);
             }
         }
 
@@ -220,7 +226,7 @@
         function findNextToMove(time) {
 
 
-            
+
 
             if (selectedChampions.size > 0) {
                 enableToMoveButtons(false);
@@ -229,7 +235,7 @@
                 let number = Math.floor(Math.random() * selectedChampions.size);
                 championToMoveNext = findMapEntryNumber(selectedChampions, number);
                 setTimeout(updateChampionToMoveText, time);
-                
+
                 enableToMoveButtons(true);
             } else {
                 $(championTextId)[0].innerHTML = "Pick champions";
@@ -247,10 +253,10 @@
         function enableToMoveButtons(enableButtons) {
             $("nextToMoveButton").prop('disabled', !enableButtons);
 
-            if(enableButtons){
+            if (enableButtons) {
                 $("nextToMoveButton").addClass("btn-primary");
                 $("nextToMoveButton").removeClass("btn-secondary");
-            } else{
+            } else {
                 $("nextToMoveButton").removeClass("btn-primary");
                 $("nextToMoveButton").addClass("btn-secondary");
             }
