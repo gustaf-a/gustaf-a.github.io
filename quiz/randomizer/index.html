@@ -54,6 +54,18 @@
         img {
             width: 100%;
         }
+
+        .grey-border {
+            border: 10px solid grey;
+        }
+
+        .red-border {
+            border: 10px dashed red;
+        }
+
+        .green-border {
+            border: 10px solid green;
+        }
     </style>
 </head>
 
@@ -85,27 +97,29 @@
         </div>
 
         <div id="championToMove" class="justify-content-center row">
-                <div class="col-8">
-                    <img id="championToMove-image" src="" alt="" class="mh-100">
-                </div>
-                <h1 id="championToMove-text">No champions picked</h1>
+            <h1 id="championToMove-text">No champions picked</h1>
         </div>
-
-        <div class="row justify-content-md-center" id="allPickedChampions">
-            <div id="champion-picked-0" class="col-2 championPicked"></div>
-            <div id="champion-picked-1" class="col-2 championPicked"></div>
-            <div id="champion-picked-2" class="col-2 championPicked"></div>
-            <div id="champion-picked-3" class="col-2 championPicked"></div>
-            <div id="champion-picked-4" class="col-2 championPicked"></div>
-            <div id="champion-picked-5" class="col-2 championPicked"></div>
-            <div id="champion-picked-6" class="col-2 championPicked"></div>
-            <div id="champion-picked-7" class="col-2 championPicked"></div>
-            <div id="champion-picked-8" class="col-2 championPicked"></div>
-            <div id="champion-picked-9" class="col-2 championPicked"></div>
+        <div id="championToMove" class="justify-content-center row">
+            <div class="col-lg-4 col-10">
+                <img id="championToMove-image" src="" alt="">
+            </div>
+        </div>
+        <br>
+        <div class="row justify-content-center" id="allPickedChampions">
+            <div id="champion-picked-0" class="col-lg-1 col-2 championPicked"></div>
+            <div id="champion-picked-1" class="col-lg-1 col-2 championPicked"></div>
+            <div id="champion-picked-2" class="col-lg-1 col-2 championPicked"></div>
+            <div id="champion-picked-3" class="col-lg-1 col-2 championPicked"></div>
+            <div id="champion-picked-4" class="col-lg-1 col-2 championPicked"></div>
+            <div id="champion-picked-5" class="col-lg-1 col-2 championPicked"></div>
+            <div id="champion-picked-6" class="col-lg-1 col-2 championPicked"></div>
+            <div id="champion-picked-7" class="col-lg-1 col-2 championPicked"></div>
+            <div id="champion-picked-8" class="col-lg-1 col-2 championPicked"></div>
+            <div id="champion-picked-9" class="col-lg-1 col-2 championPicked"></div>
         </div>
 
         <br>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-1"></div>
             <div id="control-panel-findNextMove" class="control-panel">
                 <button id="button-findNextMove-fast" onclick="findNextToMove(500)" type="button"
@@ -114,10 +128,12 @@
                     class="btn-primary btn-sm nextToMoveButton">Next Move Normal</button>
                 <button id="button-findNextMove-slow" onclick="findNextToMove(4000)" type="button"
                     class="btn-primary btn-sm nextToMoveButton">Next Move Slow</button>
+                    <button id="button-findNextMove-slow" onclick="findNextToMove(8000)" type="button"
+                    class="btn-primary btn-sm nextToMoveButton">Next Move Very Slow</button>
             </div>
         </div>
         <br>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-1"></div>
             <div class="control-panel">
                 <button id="button-control-panel-toggle-menu" onclick="toggleMenu()" type="button"
@@ -223,23 +239,41 @@
         let championImageId;
         championImageId = "#" + championToMove + "-image";
 
+        const animationSpeed = 200; //lower is faster
+        const animationDelayNumber = 3;
+        let championNumberToAnimateNext;
+
         function findNextToMove(time) {
-
-
-
 
             if (selectedChampions.size > 0) {
                 enableToMoveButtons(false);
-                $(championImageId).attr("src", "img/unknown.jpg");
+                $(championImageId).attr("src", "img/unknown.png");
+                setChampionToMoveBorderStyle("grey-border");
                 $(championTextId)[0].innerHTML = "Finding next champion to move";
                 let number = Math.floor(Math.random() * selectedChampions.size);
                 championToMoveNext = findMapEntryNumber(selectedChampions, number);
+
+                championNumberToAnimateNext = 0;
+                for (var i = animationDelayNumber; i < (time / animationSpeed) - 1; i++) {
+                    setTimeout(animateChampionToMoveNext, animationSpeed * i);
+                }
+
                 setTimeout(updateChampionToMoveText, time);
 
                 enableToMoveButtons(true);
             } else {
                 $(championTextId)[0].innerHTML = "Pick champions";
             }
+        }
+
+        function setChampionToMoveBorderStyle(newClass) {
+            //clear old 
+            $(championImageId).removeClass("grey-border");
+            $(championImageId).removeClass("red-border");
+            $(championImageId).removeClass("green-border");
+
+            //set new
+            $(championImageId).addClass(newClass);
         }
 
         function findMapEntryNumber(map, number) {
@@ -250,6 +284,7 @@
             }
             return values.next().value;
         }
+
         function enableToMoveButtons(enableButtons) {
             $("nextToMoveButton").prop('disabled', !enableButtons);
 
@@ -262,9 +297,27 @@
             }
         }
 
+        function animateChampionToMoveNext() {
+            setChampionToMoveBorderStyle("red-border");
+            setChampionToMoveNext(findMapEntryNumber(selectedChampions, championNumberToAnimateNext));
+            setNextAnimateNumber();
+        }
+
+        function setNextAnimateNumber() {
+            championNumberToAnimateNext++;
+            if (championNumberToAnimateNext >= selectedChampions.size) {
+                championNumberToAnimateNext = 0;
+            }
+        }
+
         function updateChampionToMoveText() {
-            $(championTextId)[0].innerHTML = champions[championToMoveNext];
-            $(championImageId).attr("src", "img/" + championsImages[championToMoveNext]);
+            setChampionToMoveNext(championToMoveNext);
+            setChampionToMoveBorderStyle("green-border");
+        }
+
+        function setChampionToMoveNext(championNumber) {
+            $(championTextId)[0].innerHTML = champions[championNumber];
+            $(championImageId).attr("src", "img/" + championsImages[championNumber]);
         }
 
     </script>
