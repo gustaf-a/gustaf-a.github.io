@@ -57,6 +57,25 @@ var responses = `{
     }
 }`;
 
+// TODO Make all questions into a javascript object that generates the content. Much better and easier to expand.
+// var questions = [
+//     {
+//         name = "classic",
+//         languages =
+//         {
+//             english = {
+//                 questions =[
+//                     { text = "" }
+//                 ],
+//                 responses =[
+//                     { text = "" }
+//                 ]
+//             }
+//         }
+//     }
+// ]
+
+
 const failedResponseMessage = "Error when finding response";
 const noResponseMessage = "Common response not yet written.";
 
@@ -152,7 +171,7 @@ function getQuestionResponse(question, language, questionNumber) {
 function getQuestionResponseFromObject(questionObject, language, number) {
     number--;
 
-    if(questionObject == null) {
+    if (questionObject == null) {
         return noResponseMessage;
     }
 
