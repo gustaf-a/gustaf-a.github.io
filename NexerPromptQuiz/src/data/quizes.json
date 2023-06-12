@@ -1,0 +1,577 @@
+[
+	{
+		"id": 1,
+		"img": "src/assets/white-dog.jpeg",
+		"name": "Beginner and curious",
+		"questions": [
+			{
+				"id": "654321",
+				"text": "What is a 'prompt' when talking about AI?",
+				"trivia": "Prompt Engineering is a hot new field which focuses on how we can instruct AI language models.",
+				"options": [
+					{
+						"text": "An algorithm used to train the AI model.",
+						"isCorrect": false
+					},
+					{
+						"text": "The output given to the user by the AI model.",
+						"isCorrect": false
+					},
+					{
+						"text": "The input or question from a user given to the AI model.",
+						"isCorrect": true
+					}
+				]
+			},
+			{
+				"id": "341378",
+				"text": "When do we use prompting?",
+				"trivia": "The prompt is the instructions to an AI model to complete a specific task.",
+				"options": [
+					{
+						"text": "When we create the AI models."
+					},
+					{
+						"text": "When we instruct it to do tasks, such as creating images from text or answer a question.",
+						"isCorrect": true
+					},
+					{
+						"text": "When we fine-tune AI models to better complete specific tasks."
+					}
+				]
+			},
+			{
+				"id": "789012",
+				"text": "Why are good prompts important?",
+				"trivia": "Good prompts help to produce clear, specific, and relevant responses from AI language models.",
+				"options": [
+					{
+						"text": "To increase the speed of the AI."
+					},
+					{
+						"text": "To get correct and relevant responses.",
+						"isCorrect": true
+					},
+					{
+						"text": "To get a result we need to ask in the correct way."
+					}
+				]
+			},
+			{
+				"id": "345678",
+				"text": "Which of these tasks can an AI language model help us do?",
+				"trivia": "AI language models can be used for many different tasks, even some things not directly connected to language.",
+				"options": [
+					{
+						"text": "Writing emails or essays, summarizing text, translating between languages",
+						"isCorrect": true
+					},
+					{
+						"text": "Creating code, explaining code, finding bugs in code, reviewing code",
+						"isCorrect": true
+					},
+					{
+						"text": "Helping us coming up with new ideas",
+						"isCorrect": true
+					}
+				]
+			},
+			{
+				"id": "456789",
+				"text": "What are some dangers and risks we need to be aware of when using language models?",
+				"trivia": "Language models can sound very confident while making up completely false information. We should also never input confidential data such as code, customer information etc.",
+				"options": [
+					{
+						"text": "The models will learn from our previous conversations, so if I joke around too much it'll be hard to get serious answers.",
+						"isCorrect": false
+					},
+					{
+						"text": "The language model will try to convince me to pay for longer and better answers.",
+						"isCorrect": false
+					},
+					{
+						"text": "Language models sound confident when they make things up, and we should never input confidential data into them.",
+						"isCorrect": true
+					}
+				]
+			},
+			{
+				"id": "901234",
+				"text": "Prompts should be as short and concise as possible, the best is a single sentence.",
+				"trivia": "It's very important that we provide enough context, instructions and details when we prompt. It's easy to get irrelevant answers.",
+				"options": [
+					{
+						"text": "True! We should only use the most important words to avoid distracting the language model from it's task.",
+						"isCorrect": false
+					},
+					{
+						"text": "False! We should be specific with what we want, how we want it done, and provide a lot of context.",
+						"isCorrect": true
+					}
+				]
+			},
+			{
+				"id": "903334",
+				"text": "Which of these prompts is better?",
+				"trivia": "We want to write specific and clear prompts, defining the format and tone, and giving the model a lot of context.",
+				"options": [
+					{
+						"text": "Please write an email for me asking the others when we can meet for the next sprint planning.",
+						"isCorrect": false
+					},
+					{
+						"text": "Act as a project manager. Write a short email asking which day and time is the best for the whole team to meet for the next sprint planning. Include a list of 3 proposed times formatted like this 2023-XX-XX HH:mm. Friendly and casual tone.",
+						"isCorrect": true
+					}
+				]
+			},
+			{
+				"id": "901234",
+				"text": "What are some good strategies for creating better prompts?",
+				"trivia": "Creating better prompts can involve being explicit, defining the format, and using more context.",
+				"options": [
+					{
+						"text": "Use general words to not influence the model too much.",
+						"isCorrect": false
+					},
+					{
+						"text": "Write clear instructions, specify the desired length of the output, provide examples.",
+						"isCorrect": true
+					},
+					{
+						"text": "Be very polite.",
+						"isCorrect": false
+					}
+				]
+			},
+			{
+				"id": "215545",
+				"trivia": "Providing examples is a good way to direct the output of the model. This kind of prompting is called 'one-shot prompting' or 'few-shot prompting'.",
+				"text": "What is a good way to get the response from a model to be formatted in a specific way?",
+				"options": [
+					{
+						"text": "Provide an example.",
+						"isCorrect": true
+					},
+					{
+						"text": "You can't control the output of the model.",
+						"isCorrect": false
+					}
+				]
+			},
+			{
+				"id": "567890",
+				"text": "What could you try when a language model doesn't respond as you want it to?",
+				"trivia": "It's true that some things are very hard or impossible for language models, but we need to experiment and improve our prompts to get good answers.",
+				"options": [
+					{
+						"text": "Try the prompt again. Models give different answers each time.",
+						"isCorrect": false
+					},
+					{
+						"text": "Many things are simply impossible for language models. If you get bad output you should find the information in other ways.",
+						"isCorrect": false
+					},
+					{
+						"text": "Experiment with different prompts and refine your input",
+						"isCorrect": true
+					}
+				]
+			},
+			{
+				"id": "456789",
+				"text": "How can we prompt a language model to get more creative answers?",
+				"trivia": "To give uncommon or more creative answers, or you could ask the model to think step-by-step and brainstorm first.",
+				"options": [
+					{
+						"text": "Ask the model the same question again.",
+						"isCorrect": false
+					},
+					{
+						"text": "Ask the model to consider wild possibilities.",
+						"isCorrect": true
+					},
+					{
+						"text": "Ask the model for uncommon answers.",
+						"isCorrect": true
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 2,
+		"img": "src/assets/computer-chat-gpt.jpg",
+		"name": "I use ChatGPT often",
+		"questions": [
+			{
+				"id": "210345",
+				"text": "What can happen when we use poorly created prompts?",
+				"trivia": "Poorly chosen prompts can lead to irrelevant answers which might mislead us.",
+				"options": [
+					{
+						"text": "We don't get an answer. The model will stop working.",
+						"isCorrect": false
+					},
+					{
+						"text": "The model will start learning bad behavior.",
+						"isCorrect": false
+					},
+					{
+						"text": "We might get irrelevant answers.",
+						"isCorrect": true
+					}
+				]
+			},
+			{
+				"id": "1234",
+				"text": "What does 'giving the model time to think' mean?",
+				"trivia": "Step by step instructions are a common way to give the model time to think and it can reduce reasoning errors.",
+				"options": [
+					{
+						"text": "Telling the model that you're not in a hurry.",
+						"isCorrect": false
+					},
+					{
+						"text": "Prompting in a way so the model works out an answer over time.",
+						"isCorrect": true
+					},
+					{
+						"text": "Giving the model a break from generating outputs after they've processed a lot of data.",
+						"isCorrect": false
+					}
+				]
+			},
+			{
+				"id": "234567",
+				"text": "Which of these prompts are most likely to give a good response?",
+				"trivia": "Prompts that are clear, specific, and provide adequate context are more likely to yield good responses.",
+				"options": [
+					{
+						"text": "Sentences with words missing that the model can complete.",
+						"isCorrect": false
+					},
+					{
+						"text": "Clear, specific prompts with many details.",
+						"isCorrect": true
+					},
+					{
+						"text": "Instructions written as one long sentence.",
+						"isCorrect": false
+					}
+				]
+			},
+			{
+				"id": "1234",
+				"text": "What is this style of prompting called? 'Give me a list of many ideas for an afterwork. Here are two examples: Play shuffleboard. Chocolate tasting.'",
+				"trivia": "Few-shot prompting (when we give a few examples) is a very useful technique that we can use to give a specific style, tone or format to the output.",
+				"options": [
+					{
+						"text": "Few-shot prompting.",
+						"isCorrect": true
+					},
+					{
+						"text": "List prompting.",
+						"isCorrect": false
+					},
+					{
+						"text": "Example prompting.",
+						"isCorrect": false
+					}
+				]
+			},
+			{
+				"id": "678901",
+				"text": "How can we avoid hallucinations in language models?",
+				"trivia": "We can't guarantee that no hallucinations occur, but step-by-step instructions can help.",
+				"options": [
+					{
+						"text": "Ask the model to provide references.",
+						"isCorrect": false
+					},
+					{
+						"text": "Tell the model not to lie.",
+						"isCorrect": false
+					},
+					{
+						"text": "Provide step-by-step instructions to improve reasoning.",
+						"isCorrect": true
+					}
+				]
+			},
+			{
+				"id": "123456",
+				"text": "What are some privacy concerns associated with the use of large language models?",
+				"trivia": "A few global companies have banned the use of ChatGPT. Samsung as an example had confidential data becoming part of the training data of GPT which made it globally available.",
+				"options": [
+					{
+						"text": "There are no privacy concerns with large language models.",
+						"isCorrect": false
+					},
+					{
+						"text": "Large language models can physically invade private spaces.",
+						"isCorrect": false
+					},
+					{
+						"text": "Large language models can inadvertently generate sensitive information or misuse private data.",
+						"isCorrect": true
+					}
+				]
+			},
+			{
+				"id": "110510",
+				"text": "Why do we want to use delimiters in our prompts?",
+				"trivia": "Delimiter, such as ```, ####, or tags helps the model process different parts of the prompt and can help prevent prompt injection.",
+				"options": [
+					{
+						"text": "To add aesthetic value to prompts and make it easier to read for humans.",
+						"isCorrect": false
+					},
+					{
+						"text": "To provide clear start and end points for the intended response.",
+						"isCorrect": false
+					},
+					{
+						"text": "To clearly divide different parts of the prompt to the model.",
+						"isCorrect": true
+					}
+				]
+			},
+			{
+				"id": "1623110",
+				"text": "Can ChatGPT fact check itself?",
+				"trivia": "ChatGPT can sometimes discover hallucinations made by itself, but we can't rely on it to verify the accuracy of information.",
+				"options": [
+					{
+						"text": "Yes, it can verify the accuracy of information.",
+						"isCorrect": false
+					},
+					{
+						"text": "No, it can only provide information based on its training data.",
+						"isCorrect": true
+					},
+					{
+						"text": "Yes, it can search the internet for real-time fact checking.",
+						"isCorrect": false
+					}
+				]
+			},
+			{
+				"id": "126210",
+				"text": "What is meant by the 'knowledge cutoff' of a language model, and why is this important to consider when using models like GPT-4?",
+				"trivia": "The model may still try to provide information after it's cutoff date, but that information is not reliable.",
+				"options": [
+					{
+						"text": "It refers to the amount of data the model can store.",
+						"isCorrect": false
+					},
+					{
+						"text": "It refers to the date at which the training data ends, meaning the model isn't aware of events in the world after this point.",
+						"isCorrect": true
+					},
+					{
+						"text": "It refers to the model's ability to forget outdated information.",
+						"isCorrect": false
+					}
+				]
+			},
+			{
+				"id": "124410",
+				"text": "Why is can it be good to start a prompt with 'Act as a'?",
+				"trivia": "",
+				"options": [
+					{
+						"text": "The model is programmed to always look for a role to take.",
+						"isCorrect": false
+					},
+					{
+						"text": "It provides context and a role for the model, influencing the style and content of the response.",
+						"isCorrect": true
+					},
+					{
+						"text": "It improves the model's understanding of the question.",
+						"isCorrect": false
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": 3,
+		"img": "src/assets/cheers-robot.jpg",
+		"name": "I'm not an expert, but..",
+		"questions": [
+			{
+				"id": "123456",
+				"text": "How does prompting work in AI language models?",
+				"trivia": "Language models predict the probability of each possible next word, given the words that have come before. Special reinforcement learning is done to enable the model to answer questions better.",
+				"options": [
+					{
+						"text": "By programming the model to respond in specific ways",
+						"isCorrect": false
+					},
+					{
+						"text": "By providing a sequence of words and asking the model to predict the next word",
+						"isCorrect": true
+					},
+					{
+						"text": "By controlling the model's internet access",
+						"isCorrect": false
+					}
+				]
+			},
+			{
+				"id": "1235116",
+				"text": "What's an emergent capability in an AI model?",
+				"trivia": "Emergent capabilities are a hotly discussed topic and some believe it's caused by bad measuring while others see them as a by-product of massive neural network size.",
+				"options": [
+					{
+						"text": "An ability that an AI gradually masters through supervised training.",
+						"isCorrect": false
+					},
+					{
+						"text": "Behaviors and abilities that suddenly appear as a byproduct of learning.",
+						"isCorrect": true
+					},
+					{
+						"text": "An ability to emerge from a dormant state when activated",
+						"isCorrect": false
+					}
+				]
+			},
+			{
+				"id": "123456",
+				"text": "How do tokenization work in the context of language models?",
+				"trivia": "Tokenization helps with performance in understanding context, semantics, and syntax. Different tokenization is used for coding models than for natural language models.",
+				"options": [
+					{
+						"text": "It transforms the text into a series of images for processing.",
+						"isCorrect": false
+					},
+					{
+						"text": "It scrambles the input to test the AI's problem-solving ability.",
+						"isCorrect": false
+					},
+					{
+						"text": "It breaks down input into commonly appearing chunks that the model can process.",
+						"isCorrect": true
+					}
+				]
+			},
+			{
+				"id": "123121",
+				"text": "Are there any reasons to use smaller language models such as GPT-3 if we have access to GPT-4?",
+				"trivia": "Despite the advanced capabilities of GPT-4, there could be reasons to use GPT-3, including cost efficiency, speed and computational requirements, and application constraints.",
+				"options": [
+					{
+						"text": "Yes, GPT-3 is faster, can be more cost-efficient, and is excellent for certain tasks.",
+						"isCorrect": true
+					},
+					{
+						"text": "No, GPT-4 always outperforms GPT-3.",
+						"isCorrect": false
+					},
+					{
+						"text": "Yes, because GPT-4 explains too much in the answers.",
+						"isCorrect": false
+					}
+				]
+			},
+			{
+				"id": "678901",
+				"text": "What can we expect when it comes to discrimination and bias within AI and language models?",
+				"trivia": "",
+				"options": [
+					{
+						"text": "AI models are free from bias and discrimination because of how they're built, so we can use them to overcome human social biases.",
+						"isCorrect": false
+					},
+					{
+						"text": "AI has biases and discriminate in the same ways as humans.",
+						"isCorrect": false
+					},
+					{
+						"text": "The data used to train AI models may cause unpredictable biases that are hard to discover.",
+						"isCorrect": true
+					}
+				]
+			},
+			{
+				"id": "123456",
+				"text": "How can we protect systems we build from prompt injection?",
+				"trivia": "<trivia>",
+				"options": [
+					{
+						"text": "<alternative 1>",
+						"isCorrect": false
+					},
+					{
+						"text": "<alternative 2>",
+						"isCorrect": true
+					},
+					{
+						"text": "<alternative 3>",
+						"isCorrect": false
+					}
+				]
+			},
+			{
+				"id": "123456",
+				"text": "What's the role of temperature in the GPT models?",
+				"trivia": "<trivia>",
+				"options": [
+					{
+						"text": "<alternative 1>",
+						"isCorrect": false
+					},
+					{
+						"text": "<alternative 2>",
+						"isCorrect": true
+					},
+					{
+						"text": "<alternative 3>",
+						"isCorrect": false
+					}
+				]
+			},
+			{
+				"id": "123456",
+				"text": "What's OpenAIs moderation API?",
+				"trivia": "<trivia>",
+				"options": [
+					{
+						"text": "<alternative 1>",
+						"isCorrect": false
+					},
+					{
+						"text": "<alternative 2>",
+						"isCorrect": true
+					},
+					{
+						"text": "<alternative 3>",
+						"isCorrect": false
+					}
+				]
+			},
+			{
+				"id": "123456",
+				"text": "What's the difference between Chain of Thought and Tree of Thought?",
+				"trivia": "<trivia>",
+				"options": [
+					{
+						"text": "They are types of AI models focused on decision making.",
+						"isCorrect": false
+					},
+					{
+						"text": "They are prompting techniques that improves model perfomance on complex tasks.",
+						"isCorrect": true
+					},
+					{
+						"text": "They are methods to help us decide when to use AI.",
+						"isCorrect": false
+					}
+				]
+			}
+		]
+	}
+]
