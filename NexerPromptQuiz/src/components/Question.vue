@@ -49,18 +49,19 @@ watch(
 			:key="index"
 			@click="emitSelectedOption(alternative.isCorrect, index)"
 		>
-			<p class="option-label"
-        :class="{
+			<p
+				class="option-label"
+				:class="{
 					'wrong-answer': hasAnswered && alternative.isCorrect == false,
-					'correct-answer': hasAnswered && alternative.isCorrect
+					'correct-answer': hasAnswered && alternative.isCorrect,
 				}"
-      >
+			>
 				{{ optionLabels[index] }}
 			</p>
 			<div
 				class="option-value"
 				:class="{
-          'selected-answer': hasAnswered && selectedOption.value === index
+					'selected-answer': hasAnswered && selectedOption.value === index,
 				}"
 			>
 				<p
@@ -119,11 +120,11 @@ watch(
 .correct-answer {
 	background-color: rgba(0, 128, 0, 1);
 	color: black;
-  font-weight: 800;
+	font-weight: 800;
 }
 
-.correct-answer-text{
-  font-weight: 800;
+.correct-answer-text {
+	font-weight: 800;
 }
 
 .wrong-answer {

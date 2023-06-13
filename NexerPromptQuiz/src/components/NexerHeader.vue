@@ -4,9 +4,6 @@ import logoSrc from '@/assets/nexer_logo.png';
 
 const router = useRouter();
 
-// const logoSrc = "https://nexergroup.com/wp-content/uploads/2021/04/nexer-og.png";
-// const logoSrc = 'src/assets/nexer_logo.png';
-
 const navigateToHome = () => {
     router.push(`/`);
 };
